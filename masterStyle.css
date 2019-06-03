@@ -1,98 +1,124 @@
 body {
-    margin: 1em;
-    background-color: lightslategray;
-    max-width: 900px;
-    margin: auto;
-    margin-top: 5px;
-    font-family: 'Segoe UI';
-    font-size: 14pt;
+  margin: 1em;
+  background: black;
+  margin-top: 5px;
+  font-family: 'Segoe UI';
+  font-size: 14pt;
 }
-  
-  .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 100px 50px 100px 600px 50px; 
-    grid-gap: 5px;
-    grid-template-areas:
-        "header header header logo"
-        "space space space space"
-        "links links links links"
-        "left main main main"
-        "footleft footcentre footcentre footright";
+
+.headwrapper {
+  display: grid;
+  margin: auto;
+  grid-template-columns: auto 150px;
+  grid-template-rows: 150px;
+  grid-template-areas:
+  "header logo";
+}
+
+.wrapper {
+  display: grid;
+  max-width: 900px;
+  margin: auto;
+  grid-template-columns: 100px 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px 100px 600px 50px; 
+  grid-template-areas:
+    "left space space space space"
+    "left links links links links"
+    "left main main main main"
+    "left footleft footcentre footcentre footright";
   }
 
-  @media (max-width:900px) {
-      .wrapper {
-          font-size: 11pt;
-          padding: 5px;
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: 100px 50px 100px 400px 100px 50px 50px;
-          grid-template-areas:
-          "logo header"
-          "space space"
-          "links links"
-          "main main"
-          "left left"
-          "footleft footright"
-          "footcentre footcentre";
-      }
-  }
-  
+.box {
+  /*box-shadow: 2px 2px black;*/
+  background: rgb(207, 223, 236);
+}
+
   .header {
     grid-area: header;
-    padding: 5px;
+    background: yellow;
+    font-size: 70pt;
     font-weight: bold;
     font-style: italic;
-    background-color: rgb(207, 223, 236);
+    color: yellow;
+    text-shadow: 0px 0px 8px purple;
+    text-align: center;
   }
 
   .logo {
     grid-area: logo;
-    padding: 5px;
-    background-color: rgb(207, 223, 236);
     text-align: right;
+    background: green;
   }
 
   .space {
     grid-area: space;
-    padding: 5px;
-    background-color: rgb(207, 223, 236);
+    background:lightcoral;
   }
 
   .links {
     grid-area: links;
-    padding: 5px;
-    background-color: rgb(207, 223, 236);
+    background: lightskyblue;
   }
 
   .left {
     grid-area: left;
-    padding: 5px;
-    background-color: rgb(207, 223, 236);
+    background: lightpink;
   }
 
   .main {
     grid-area: main;
-    padding: 5px;
-    background-color: rgb(207, 223, 236);
+    background:lightyellow;
   }
 
   .footleft {
     grid-area: footleft;
-    padding: 5px;
-    background-color: rgb(207, 223, 236);
+    background:lightblue;
   }
 
   .footcentre {
     grid-area: footcentre;
-    padding: 5px;
-    background-color: rgb(207, 223, 236);
+    background:lightsalmon;
     text-align: center;
   }
 
   .footright {
     grid-area: footright;
-    padding: 5px;
-    background-color: rgb(207, 223, 236);
+    background:yellow;
     text-align: right;
   }
+
+  @media (max-width:900px) {
+    body {
+      background:cyan;
+    }
+  
+    .headwrapper {
+      display: grid;
+      margin: auto;
+      grid-template-columns: auto 50px;
+      grid-template-rows: 50px;
+      grid-template-areas:
+      "header logo";
+    }
+  
+    .wrapper {
+      font-size: 11pt;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 50px 100px 400px 100px 50px 50px;
+      grid-template-areas:
+        "space space space"
+        "links links links"
+        "main main main"
+        "left left left"
+        "footleft gap footright"
+        "footleft footcentre footright";
+      }
+  
+    .header {
+      font-size:25pt;
+      color:black;
+      text-shadow: none;
+    }
+  }
+  
+  
