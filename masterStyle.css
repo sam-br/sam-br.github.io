@@ -1,0 +1,98 @@
+body {
+    margin: 1em;
+    background-color: lightslategray;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 5px;
+    font-family: 'Segoe UI';
+    font-size: 14pt;
+}
+  
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 50px 100px 600px 50px; 
+    grid-gap: 5px;
+    grid-template-areas:
+        "header header header logo"
+        "space space space space"
+        "links links links links"
+        "left main main main"
+        "footleft footcentre footcentre footright";
+  }
+
+  @media (max-width:900px) {
+      .wrapper {
+          font-size: 11pt;
+          padding: 5px;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 100px 50px 100px 400px 100px 50px 50px;
+          grid-template-areas:
+          "logo header"
+          "space space"
+          "links links"
+          "main main"
+          "left left"
+          "footleft footright"
+          "footcentre footcentre";
+      }
+  }
+  
+  .header {
+    grid-area: header;
+    padding: 5px;
+    font-weight: bold;
+    font-style: italic;
+    background-color: rgb(207, 223, 236);
+  }
+
+  .logo {
+    grid-area: logo;
+    padding: 5px;
+    background-color: rgb(207, 223, 236);
+    text-align: right;
+  }
+
+  .space {
+    grid-area: space;
+    padding: 5px;
+    background-color: rgb(207, 223, 236);
+  }
+
+  .links {
+    grid-area: links;
+    padding: 5px;
+    background-color: rgb(207, 223, 236);
+  }
+
+  .left {
+    grid-area: left;
+    padding: 5px;
+    background-color: rgb(207, 223, 236);
+  }
+
+  .main {
+    grid-area: main;
+    padding: 5px;
+    background-color: rgb(207, 223, 236);
+  }
+
+  .footleft {
+    grid-area: footleft;
+    padding: 5px;
+    background-color: rgb(207, 223, 236);
+  }
+
+  .footcentre {
+    grid-area: footcentre;
+    padding: 5px;
+    background-color: rgb(207, 223, 236);
+    text-align: center;
+  }
+
+  .footright {
+    grid-area: footright;
+    padding: 5px;
+    background-color: rgb(207, 223, 236);
+    text-align: right;
+  }
