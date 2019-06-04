@@ -1,7 +1,8 @@
 body {
   margin: 1em;
-  background: black;
-  margin-top: 5px;
+  background: darkblue;
+  padding-top: 0px;
+  padding: 0px;
   font-family: 'Segoe UI';
   font-size: 14pt;
 }
@@ -9,6 +10,10 @@ body {
 .headwrapper {
   display: grid;
   margin: auto;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
   grid-template-columns: auto 150px;
   grid-template-rows: 150px;
   grid-template-areas:
@@ -16,11 +21,13 @@ body {
 }
 
 .wrapper {
+  padding-top: 155px;
   display: grid;
   max-width: 900px;
   margin: auto;
+  grid-gap: 0px; 
   grid-template-columns: 100px 1fr 1fr 1fr 1fr;
-  grid-template-rows: 50px 100px 600px 50px; 
+  grid-template-rows: 50px 100px 1000px 50px; 
   grid-template-areas:
     "left space space space space"
     "left links links links links"
@@ -42,6 +49,12 @@ body {
     color: yellow;
     text-shadow: 0px 0px 8px purple;
     text-align: center;
+    transition: 1s;  
+  }
+
+  .header:hover {
+    background: transparent;
+    color: pink;
   }
 
   .logo {
@@ -96,12 +109,13 @@ body {
       display: grid;
       margin: auto;
       grid-template-columns: auto 50px;
-      grid-template-rows: 50px;
+      grid-template-rows: 50px; 
       grid-template-areas:
       "header logo";
     }
   
     .wrapper {
+      padding-top: 50px;
       font-size: 11pt;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 50px 100px 400px 100px 50px 50px;
