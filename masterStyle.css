@@ -5,16 +5,29 @@ body {
   font-family: 'Segoe UI';
 }
 
-/* HEADER CSS - Describes the .headwrapper which contains the .header on the left .logo on the right and a .headerspacer in the middle, with their :hover properties. */
+/*main layout template for all elements*/
+.layout {
+  display: grid;
+  color: white;
+  width: 99vw;
+  height: 98vh;
+  grid-template-columns: repeat(5, calc(98vw / 6)) auto;
+  grid-template-rows: 150px calc(98vh - 150px - 50px - 5px) 50px;
+  grid-template-areas:
+    "headwrapper headwrapper headwrapper headwrapper headwrapper headwrapper"
+    "area1 area2 area2 area2 area2 area2"
+    "area3 area3 area3 area4 area4 area4";
+}
 
-.headwrapper {
+.headlayout {
   display: grid;
   height:140px;
+  width: 100%;
   font-size: 70pt;
   font-weight: bold;
   text-align: left;
   padding-bottom: 10px;
-  grid-template-columns: 340px auto 260px;
+  grid-template-columns: 340px calc(98vw - 340px - 260px - 5px) 260px;
   grid-template-areas:
   "header headerspacer logo";
 }
@@ -42,40 +55,34 @@ body {
   transition: 1s;
   color: white;
   text-shadow: 5px 5px red;
+  text-align: right;
 }
 
 .logo:hover {
   transform: rotate(5deg);
 }
 
-/* BODY CSS */
-
-.wrapper {
-  display: grid;
-  color: white;
-  height: calc(90vh - 140px);
-  grid-gap: 2px;
-  border-radius: 15px;
-  grid-template-columns: minmax(200px, 340px) minmax(60vw, 80vw) minmax(200px, 340px) ;
-  grid-template-rows: 80% 50px;
-  grid-template-areas:
-    "area1 area2 area2"
-    "area3 area4 area4";
-}
-
 .areabox {
-  border-radius:15px;
   border: 1px solid white;
+  box-sizing: border-box;
 }
 
 .area1 {
+background: black;
+grid-area: area1;
 }
 
 .area2 {
+  background: black;
+  grid-area: area2;
 }
 
 .area3 {
+  background: black;
+  grid-area: area3;
 }
 
 .area4 {
+  background: black;
+  grid-area: area4;
 }
