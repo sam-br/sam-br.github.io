@@ -11,28 +11,35 @@ function area1_1 () {
     alert("Area1_1 Clicked");
 }
 
-function area1_2 () {
+function area1_2 (a) {
 
-    count++;
-    totalRand ++;
+    return a == 1 ? addRandIncrement():addRand();
 
-    newRand = Math.round(Math.random()*10);
-    rna.push(newRand);
+    function addRand() {
+        totalRand ++;
+        newRand = Math.round(Math.random()*10);
+        rna.push(newRand);
+    
+        if (rna.length == 1) {
+           document.getElementById("random").innerHTML = `Your random number is ${rna}.`;
+        }   else {
+           document.getElementById("random").innerHTML = `Your random numbers are ${rna}.`;
+      }
 
-    if (rna.length == 1) {
-        document.getElementById("random").innerHTML = `Your random number is ${rna}.`;
-    }   else {
-        document.getElementById("random").innerHTML = `Your random numbers are ${rna}.`;
+      document.getElementById("count").innerHTML = count;
+      document.getElementById("randomNumbers").innerHTML = rna.length;
+      document.getElementById("totalRand").innerHTML = totalRand;
     }
 
-    document.getElementById("count").innerHTML = count;
-    document.getElementById("randomNumbers").innerHTML = rna.length;
-    document.getElementById("totalRand").innerHTML = totalRand;
+    function addRandIncrement(){
+        count++
+        addRand()
+    }
 }
 
 function area1_3 () {
     document.getElementById("random").innerHTML = `Clearing...`;
-    setTimeout(function(){(document.getElementById("random").innerHTML = ``)}, 2000);
+    setTimeout(function(){(document.getElementById("random").innerHTML = ``)}, 1000);
     count++;
     document.getElementById("count").innerHTML = count;
     rna = [];
@@ -51,6 +58,7 @@ function area1_5() {
 
     numberWheelFlag = 1;
     numberWheelIterations = 0;
+    limit = ((Math.round(Math.random()*30))+30)
     count ++
     document.getElementById("count").innerHTML = count;
 
@@ -69,7 +77,7 @@ function area1_5() {
             document.getElementById("numberWheel").innerHTML = `Oh dear, you waited for ${numberWheelIterations} iterations! That's too many! ... you lose.`
         }
 
-        return numberWheelFlag == 0 ? ``: numberWheelIterations < ((Math.round(Math.random()*30))+30) ? innerWheel() : tooLong();
+        return numberWheelFlag == 0 ? ``: numberWheelIterations < limit ? innerWheel() : tooLong();
 
     }
 
@@ -81,9 +89,16 @@ function area1_6() {
     count ++
     document.getElementById("count").innerHTML = count;
     numberWheelFlag = 0
-    document.getElementById("numberWheel").innerHTML = `You stopped on ${numberWheelValue} after ${numberWheelIterations} iterations!`
+    document.getElementById("numberWheel").innerHTML = `You stopped on ${numberWheelValue} after ${numberWheelIterations} of ${limit} iterations!`
 }
 
 function area1_7() {
-
+    total = 0
+    count++
+    tenRand()
+    function tenRand() {
+        total ++
+        area1_2(0)
+        return total < 10 ? setTimeout(tenRand,100): ``;
+    }
 }
