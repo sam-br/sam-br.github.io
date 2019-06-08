@@ -3,6 +3,7 @@
 body {
   background: rgb(34, 38, 46);
   font-family: 'Segoe UI';
+  cursor: context-menu;
 }
 
 /*main layout template for all elements*/
