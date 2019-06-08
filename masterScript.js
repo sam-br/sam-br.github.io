@@ -66,12 +66,12 @@ function area1_5() {
         }
 
         function tooLong() {
-            document.getElementById("numberWheel").innerHTML = `Oh dear, you waited for 50 iterations! That's too many! ... you lose.`
+            document.getElementById("numberWheel").innerHTML = `Oh dear, you waited for ${numberWheelIterations} iterations! That's too many! ... you lose.`
         }
 
-        return numberWheelFlag == 0 ? ``: numberWheelIterations < 50 ? innerWheel() : tooLong();
-    }
+        return numberWheelFlag == 0 ? ``: numberWheelIterations < ((Math.round(Math.random()*30))+30) ? innerWheel() : tooLong();
 
+    }
 
     numberWheel()
 
