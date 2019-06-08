@@ -1,138 +1,81 @@
+/* BODY MASTER CSS */
+
 body {
-  margin: 1em;
-  background: darkblue;
-  padding-top: 0px;
-  padding: 0px;
+  background: rgb(34, 38, 46);
   font-family: 'Segoe UI';
-  font-size: 14pt;
 }
+
+/* HEADER CSS - Describes the .headwrapper which contains the .header on the left .logo on the right and a .headerspacer in the middle, with their :hover properties. */
 
 .headwrapper {
   display: grid;
-  margin: auto;
-  position: fixed;
-  width: 100%;
-  top: 0px;
-  left: 0px;
-  grid-template-columns: auto 150px;
-  grid-template-rows: 150px;
+  height:140px;
+  font-size: 70pt;
+  font-weight: bold;
+  text-align: left;
+  padding-bottom: 10px;
+  grid-template-columns: 340px auto 260px;
   grid-template-areas:
-  "header logo";
+  "header headerspacer logo";
 }
+
+.header {
+  grid-area: header;
+  font-style: italic;
+  color: yellow;
+  text-shadow: 5px 5px 10px red;
+  transition: .4s; 
+}
+
+.header:hover {
+  background: transparent;
+  color: orangered;
+  text-shadow: 5px 5px 10px yellow;
+}
+
+.headerspacer {
+  width:auto;
+}
+
+.logo {
+  background: transparent;
+  transition: 1s;
+  color: white;
+  text-shadow: 5px 5px red;
+}
+
+.logo:hover {
+  transform: rotate(5deg);
+}
+
+/* BODY CSS */
 
 .wrapper {
-  padding-top: 155px;
   display: grid;
-  max-width: 900px;
-  margin: auto;
-  grid-gap: 0px; 
-  grid-template-columns: 100px 1fr 1fr 1fr 1fr;
-  grid-template-rows: 50px 100px 1000px 50px; 
+  color: white;
+  height: calc(90vh - 140px);
+  grid-gap: 2px;
+  border-radius: 15px;
+  grid-template-columns: minmax(200px, 340px) minmax(60vw, 80vw) minmax(200px, 340px) ;
+  grid-template-rows: 80% 50px;
   grid-template-areas:
-    "left space space space space"
-    "left links links links links"
-    "left main main main main"
-    "left footleft footcentre footcentre footright";
-  }
-
-.box {
-  /*box-shadow: 2px 2px black;*/
-  background: rgb(207, 223, 236);
+    "area1 area2 area2"
+    "area3 area4 area4";
 }
 
-  .header {
-    grid-area: header;
-    background: yellow;
-    font-size: 70pt;
-    font-weight: bold;
-    font-style: italic;
-    color: yellow;
-    text-shadow: 0px 0px 8px purple;
-    text-align: center;
-    transition: 1s;  
-  }
+.areabox {
+  border-radius:15px;
+  border: 1px solid white;
+}
 
-  .header:hover {
-    background: transparent;
-    color: pink;
-  }
+.area1 {
+}
 
-  .logo {
-    grid-area: logo;
-    text-align: right;
-    background: green;
-  }
+.area2 {
+}
 
-  .space {
-    grid-area: space;
-    background:lightcoral;
-  }
+.area3 {
+}
 
-  .links {
-    grid-area: links;
-    background: lightskyblue;
-  }
-
-  .left {
-    grid-area: left;
-    background: lightpink;
-  }
-
-  .main {
-    grid-area: main;
-    background:lightyellow;
-  }
-
-  .footleft {
-    grid-area: footleft;
-    background:lightblue;
-  }
-
-  .footcentre {
-    grid-area: footcentre;
-    background:lightsalmon;
-    text-align: center;
-  }
-
-  .footright {
-    grid-area: footright;
-    background:yellow;
-    text-align: right;
-  }
-
-  @media (max-width:900px) {
-    body {
-      background:cyan;
-    }
-  
-    .headwrapper {
-      display: grid;
-      margin: auto;
-      grid-template-columns: auto 50px;
-      grid-template-rows: 50px; 
-      grid-template-areas:
-      "header logo";
-    }
-  
-    .wrapper {
-      padding-top: 50px;
-      font-size: 11pt;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 50px 100px 400px 100px 50px 50px;
-      grid-template-areas:
-        "space space space"
-        "links links links"
-        "main main main"
-        "left left left"
-        "footleft gap footright"
-        "footleft footcentre footright";
-      }
-  
-    .header {
-      font-size:25pt;
-      color:black;
-      text-shadow: none;
-    }
-  }
-  
-  
+.area4 {
+}
