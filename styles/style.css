@@ -1,10 +1,17 @@
+/*
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Josefin Slab', serif;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Goudy Bookletter 1911', serif;
+*/
+
 body {
     background: darkslategrey;
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 0px;
     margin: 0px;
-    font-family: 'Oswald'
+    font-family: 'Bebas Neue'
   }
 
 .mainbar {
@@ -18,7 +25,7 @@ body {
     background-color: lightsalmon;
     color: darkslategray;
     padding: 15px;;
-    font-size: 200%;
+    font-size: 2rem;
     transition: 0.0s;
 }
 
@@ -56,6 +63,10 @@ footer {
     padding: 20px;
 }
 
+button {
+    visibility: hidden;
+}
+
 @media only screen and (min-width: 1081px) {
 
     body {
@@ -71,15 +82,23 @@ footer {
         grid-area: span 2 / span 2;
     }
 
-    .ss {
-
-    }
-
     .p {
         grid-area: span 3 / span 2;
     }
 
     .l {
         grid-area: span 2 / span 3;
+    }
+
+    .w {
+        grid-area: span 3 / span 5;
+    }
+
+    .tv {
+        grid-area: span 2 / span 1;
+    }
+
+    .th {
+        grid-area: span 1 / span 2;
     }
 }
