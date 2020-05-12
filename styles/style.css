@@ -11,29 +11,32 @@ body {
     overflow-x: hidden;
     padding: 0px;
     margin: 0px;
-    font-family: 'Bebas Neue'
+    font-family: 'Bebas Neue';
   }
 
-.mainbar {
+header, footer {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-gap: 5px;
-    margin: 5px;;
+    margin: 5px;
 }
 
-.item {
+button, .item {
     background-color: lightsalmon;
     color: darkslategray;
     padding: 15px;;
     font-size: 2rem;
-    transition: 0.0s;
+    transition: 0.5s;
+    font-family: inherit;
+    text-align: left;
+    border: hidden;
 }
 
-.item:hover {
+button:hover, .item:hover {
     background-color: darkslategrey;
     color: lightsalmon;
     cursor: pointer;
-    font-style: italic;
+    text-shadow: black 10px 10px 0px;
 }
 
 .gallery {
@@ -44,28 +47,16 @@ body {
     margin: 5px;
 }
 
-.fig {
+figure {
     padding: 0px;
     margin: 0px;
 }
 
 img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
+    height: 100%;
+    width: 100%;
 }   
-
-footer {
-    display:flex;
-    margin: 5px;
-    background-color: lightsalmon;
-    font-size: 100%;
-    padding: 20px;
-}
-
-button {
-    visibility: hidden;
-}
 
 @media only screen and (min-width: 1081px) {
 

@@ -10,65 +10,67 @@
 
 <body>
 
-    <div class='mainbar'>
-        <div class='item'>Sam Brierley-Rimmer</div>
-        <div class='item'>Some photos that I took.</div>
-        <div class='item'>Info</div>
+    <header class='header'>
+        <button>Sam Brierley-Rimmer</button>
+        <button>Some photos that I took.</button>
+        <button>Info</button>
+    </header>
+
+    <div class='gallery' id='gallery'>
+        <figure class='l'><img loading='lazy' src='images/a00-l.jpg'></figure>
+        <figure class='l'><img loading='lazy' src='images/a01-l.jpg'></figure>
+        <figure class='s'><img loading='lazy' src='images/a02-s.jpg'></figure>
+        <figure class='p'><img loading='lazy' src='images/a03-p.jpg'></figure>
+        <figure class='l'><img loading='lazy' src='images/a04-l.jpg'></figure>
+        <figure class='p'><img loading='lazy' src='images/a05-p.jpg'></figure>
+        <figure class='l'><img loading='lazy' src='images/a06-l.jpg'></figure>
+        <figure class='w'><img loading='lazy' src='images/a10-w.jpg'></figure>
+        <figure class='s'><img loading='lazy' src='images/a07-s.jpg'></figure>
+        <figure class='l'><img loading='lazy' src='images/a09-l.jpg'></figure>
+        <figure class='p'><img loading='lazy' src='images/a08-p.jpg'></figure>
+        <figure class='l'><img loading='lazy' src='images/a11-l.jpg'></figure>
+        <figure class='l'><img loading='lazy' src='images/a13-l.jpg'></figure>
+        <figure class='s'><img loading='lazy' src='images/a12-s.jpg'></figure>
+        <figure class='l'><img loading='lazy' src='images/a14-l.jpg'></figure>
+        <figure class='s'><img loading='lazy' src='images/a15-s.jpg'></figure>
+        <figure class='l'><img loading='lazy' src='images/a16-l.jpg'></figure>
+
+        <figure class='l'><img loading='lazy' src='images/b01-l.jpg'></figure>
+        <figure class='p'><img loading='lazy' src='images/b02-p.jpg'></figure>
+        <figure class='p'><img loading='lazy' src='images/b03-p.jpg'></figure>
+        <figure class='l'><img loading='lazy' src='images/b04-l.jpg'></figure>
+        <figure class='l'><img loading='lazy' src='images/b05-l.jpg'></figure>
+        <figure class='p'><img loading='lazy' src='images/b06-p.jpg'></figure>
+        <figure class='l'><img loading='lazy' src='images/b07-l.jpg'></figure>
+        <figure class='l'><img loading='lazy' src='images/b08-l.jpg'></figure>
+        <figure class='l'><img loading='lazy' src='images/b09-l.jpg'></figure>
+        <figure class='p'><img loading='lazy' src='images/b10-p.jpg'></figure>
+        <figure class='l'><img loading='lazy' src='images/b11-l.jpg'></figure>
+        <figure class='l'><img loading='lazy' src='images/b12-l.jpg'></figure>
+        <figure class='l'><img loading='lazy' src='images/b13-l.jpg'></figure>
+        <figure class='l'><img loading='lazy' src='images/b14-l.jpg'></figure>
+        <figure class='l'><img loading='lazy' src='images/b15-l.jpg'></figure>
+        <figure class='s'><img loading='lazy' src='images/b16-l.jpg'></figure>
+        <figure class='p'><img loading='lazy' src='images/b17-p.jpg'></figure>
+
+        <figure class='th'><img loading='lazy' src='images/c04-p.jpg'></figure>
+        <figure class='th'><img loading='lazy' src='images/c08-l.jpg'></figure>
+        <figure class='l' ><img loading='lazy' src='images/c01-l.jpg'></figure>
+        <figure class='l' ><img loading='lazy' src='images/c02-l.jpg'></figure>
+        <figure class='p' ><img loading='lazy' src='images/c03-p.jpg'></figure>
+        <figure class='s' ><img loading='lazy' src='images/c05-s.jpg'></figure>
+        <figure class='s' ><img loading='lazy' src='images/c06-l.jpg'></figure>
+        <figure class=''  ><img loading='lazy' src='images/c09-s.jpg'></figure>
     </div>
 
+<footer>
+    <div class='item'></div>
+    <div class='item'>Site and contents &#169 Sam Brierley-Rimmer</div>
+    <button id='test' onclick='addImages()'>Test the function.</button>
+</footer>
 
 
-    <div class='gallery'>
-        <figure class='fig l'><img src='images/a00-l.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/a01-l.jpg' loading='lazy'></figure>
-        <figure class='fig s'><img src='images/a02-s.jpg' loading='lazy'></figure>
-        <figure class='fig p'><img src='images/a03-p.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/a04-l.jpg' loading='lazy'></figure>
-        <figure class='fig p'><img src='images/a05-p.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/a06-l.jpg' loading='lazy'></figure>
-        <figure class='fig w'><img src='images/a10-w.jpg' loading='lazy'></figure>
-        <figure class='fig s'><img src='images/a07-s.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/a09-l.jpg' loading='lazy'></figure>
-        <figure class='fig p'><img src='images/a08-p.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/a11-l.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/a13-l.jpg' loading='lazy'></figure>
-        <figure class='fig s'><img src='images/a12-s.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/a14-l.jpg' loading='lazy'></figure>
-        <figure class='fig s'><img src='images/a15-s.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/a16-l.jpg' loading='lazy'></figure>
 
-        <figure class='fig l'><img src='images/b01-l.jpg' loading='lazy'></figure>
-        <figure class='fig p'><img src='images/b02-p.jpg' loading='lazy'></figure>
-        <figure class='fig p'><img src='images/b03-p.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/b04-l.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/b05-l.jpg' loading='lazy'></figure>
-        <figure class='fig p'><img src='images/b06-p.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/b07-l.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/b08-l.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/b09-l.jpg' loading='lazy'></figure>
-        <figure class='fig p'><img src='images/b10-p.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/b11-l.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/b12-l.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/b13-l.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/b14-l.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/b15-l.jpg' loading='lazy'></figure>
-        <figure class='fig s'><img src='images/b16-l.jpg' loading='lazy'></figure>
-        <figure class='fig p'><img src='images/b17-p.jpg' loading='lazy'></figure>
-
-        <figure class='fig p'><img src='images/c04-p.jpg' loading='lazy'></figure>
-        <figure class='fig th'><img src='images/c08-l.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/c01-l.jpg' loading='lazy'></figure>
-        <figure class='fig l'><img src='images/c02-l.jpg' loading='lazy'></figure>
-        <figure class='fig p'><img src='images/c03-p.jpg' loading='lazy'></figure>
-        <figure class='fig s'><img src='images/c05-s.jpg' loading='lazy'></figure>
-        <figure class='fig s'><img src='images/c06-l.jpg' loading='lazy'></figure>
-        <figure class='fig '><img src='images/c09-s.jpg' loading='lazy'></figure>
-
-
-    </div>
-
-<footer>Site and contents &#169 Sam Brierley-Rimmer</footer>
-<button id='test' onclick='addImage()'>Test the function.</button>
 </body>
 
 </html>
