@@ -1,42 +1,153 @@
 /*
-font-family: 'Josefin Sans', sans-serif;
-font-family: 'Josefin Slab', serif;
+
 font-family: 'Bebas Neue', cursive;
+font-family: 'Contrail One', cursive;
+font-family: 'DM Mono', monospace;
+font-family: 'Fira Code', monospace;
+font-family: 'Fjalla One', sans-serif;
 font-family: 'Goudy Bookletter 1911', serif;
+font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'IBM Plex Serif', serif;
+font-family: 'Merriweather', serif;
+font-family: 'Merriweather Sans', sans-serif;
+font-family: 'News Cycle', sans-serif;
+font-family: 'Sorts Mill Goudy', serif;
+
 */
 
+:root {
+    --headfont: 'goudy bookletter 1911';
+    --headfontsize: 3rem;
+    --textfont: 'dm mono';
+    --textfontsize: 1.5rem;
+
+    --dark: black;
+    --meddark: rgb(200, 200, 200);
+    --light: white;
+
+    --darkphoto: rgb(85, 85, 85);
+    --lightphoto: rgb(240, 223, 128);
+
+    --green: rgb(162, 231, 185);
+    --blue: rgb(189, 235, 250);
+    --pink: rgb(250, 200, 234);
+    --yellow: rgb(241, 238, 176);
+}
+
+.span2h {
+    grid-column: span 2;
+}
+
+.span2v {
+    grid-row: span 2;
+}
+
+.span3h {
+    grid-column: span 3;
+}
+
+.span3v {
+    grid-row: span 3;
+}
+
 body {
-    background: darkslategrey;
+    background: var(--light);
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 0px;
     margin: 0px;
-    font-family: 'Bebas Neue';
   }
 
 header, footer {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
     grid-gap: 5px;
     margin: 5px;
 }
 
-button, .item {
-    background-color: lightsalmon;
-    color: darkslategray;
-    padding: 15px;;
-    font-size: 2rem;
+header {
+    grid-template-columns: repeat(2,1fr);
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+a {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 15px;
+    font-size: var(--headfontsize);
     transition: 0.5s;
-    font-family: inherit;
+    font-family: var(--headfont);
+    text-align: left;
+    border: hidden;
+    text-decoration: none;
+    vertical-align: center;
+}
+
+.item {
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 15px;
+    font-size: var(--headfontsize);
+    transition: 0.5s;
+    font-family: var(--headfont);
     text-align: left;
     border: hidden;
 }
 
-button:hover, .item:hover {
-    background-color: darkslategrey;
-    color: lightsalmon;
+a:hover {
+    background-color: var(--dark);
+    color: var(--light);
     cursor: pointer;
-    text-shadow: black 10px 10px 0px;
+}
+
+.home{
+    background-color: var(--green);
+}
+
+.photos{
+    background-color: var(--blue);
+}
+
+.music{
+    background-color: var(--pink);
+}
+
+.videos{
+    background-color: var(--yellow);
+}
+
+.section1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    margin: 5px;
+}
+
+.section2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    margin: 5px;
+}
+
+.section3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    margin: 5px;
+}
+
+.text {
+    font-family: var(--textfont);
+    color: var(--dark);
+    font-size: var(--textfontsize);
+    padding: 3%;
+    background-color: var(--meddark);
+    font-weight: lighter;
+    vertical-align: top;
 }
 
 .gallery {
@@ -58,16 +169,42 @@ img {
     width: 100%;
 }   
 
+iframe {
+    object-fit: scale-down;
+    width: 100%;
+    height: 100%;
+}
+
+.smalltext {
+    font-size: 1rem;
+}
+
 @media only screen and (min-width: 1081px) {
 
-    body {
-        background-color: darkslategrey;
-        }
+    header {
+        grid-template-columns: 1fr 1fr repeat(4,2fr);
+    }
 
     .gallery {
         grid-template-columns: repeat(5,1fr);
         grid-template-rows: repeat(auto-fill,250px);
         }
+
+    .section2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .section3 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .wspan2h {
+        grid-column: span 2;
+    }
+
+    .wspan3h {
+        grid-column: span 3;
+    }
     
     .s {
         grid-area: span 2 / span 2;
@@ -92,4 +229,5 @@ img {
     .th {
         grid-area: span 1 / span 2;
     }
+
 }
