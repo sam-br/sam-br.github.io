@@ -33,32 +33,17 @@ font-family: 'Sorts Mill Goudy', serif;
     --lightpink: rgb(246, 220, 238);
     --lightyellow: rgb(240, 238, 203); 
 
+    --rainbow-h: linear-gradient(to right, var(--lightgreen), var(--lightblue), var(--lightpink), var(--lightyellow));
+    --rainbowreverse-h: linear-gradient(to left, var(--lightgreen), var(--lightblue), var(--lightpink), var(--lightyellow));
+
     --transitiontime: 0.5s;
+
+    --spacing: 5px;
 }
 
 h1, h2, h3, h4, h5, h6, p, li, ul {
     margin: 0;
     font-weight: normal;
-}
-
-/*
-    Classes for grid item sizing
-*/
-
-.span2h {
-    grid-column: span 2;
-}
-
-.span2v {
-    grid-row: span 2;
-}
-
-.span3h {
-    grid-column: span 3;
-}
-
-.span3v {
-    grid-row: span 3;
 }
 
 body {
@@ -70,18 +55,23 @@ body {
   }
 
 a {
+    text-decoration: underline;
+    color: darkblue;
+}
+
+.headitem {
     color: var(--dark);
     padding: 1vw;
     font-size: var(--headfontsize);
     font-family: var(--headfont);
-    text-align: left;
+    text-align: center;
     border: hidden;
     text-decoration: none;
     vertical-align: center;
     transition: var(--transitiontime);
 }
 
-a:hover {
+.headitem:hover {
     background-color: var(--dark);
     cursor: pointer;
 }
@@ -90,7 +80,7 @@ a:hover {
     padding: 1vw;
     font-size: var(--headfontsize);
     font-family: var(--headfont);
-    text-align: left;
+    text-align: center;
     border: hidden;
 }
 
@@ -257,6 +247,7 @@ a:hover {
 /*
     Classes for title menu hover effects.
 */
+
 .name {
     transition: var(--transitiontime);
 }
@@ -303,14 +294,25 @@ text, p {
 }
 
 .smalltext {
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 /*
     Classes for defining grid layouts.
     ALL grid items should be in the first list then a separate entry for layout specifics.
     The layouts here are for mobile layout. See below for expanding to tablet/desktop layout.
+
+    THe margin class is used only on the outermost grid if there are nested grids.
+    Inner grids when nested already have grid gap between its own element and the parent grid gap for spacing.
+    header footer and .imagegallery have this built in as they shouldn't be nested.
 */
+
+.margin,
+header,
+footer,
+.imagegallery {
+    margin: var(--spacing);
+}
 
 header,
 footer,
@@ -320,12 +322,11 @@ footer,
 .fourcolumns,
 .imagegallery {
     display: grid;
-    grid-gap: 5px;
-    margin: 5px;
+    grid-gap: var(--spacing);
 }
 
 header {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 footer,
@@ -339,8 +340,32 @@ footer,
 .imagegallery {
     grid-template-columns: 1fr;
     grid-auto-flow: dense;
-    grid-gap: 1vw;
-    padding: 1vw;
+    grid-gap: calc(1vw + var(--spacing));
+    padding: calc(1vw + var(--spacing));
+}
+
+/*
+    Classes for grid item sizing
+*/
+
+.span {
+    grid-column: 1 / -1;
+}
+
+.span2h {
+    grid-column: span 2;
+}
+
+.span2v {
+    grid-row: span 2;
+}
+
+.span3h {
+    grid-column: span 3;
+}
+
+.span3v {
+    grid-row: span 3;
 }
 
 /*
@@ -399,7 +424,7 @@ header {
     Classes for grid item positioning in tablet/desktop layout.
 */
 
-.span {
+.widespan {
     grid-column: 1 / -1;
 }
 
