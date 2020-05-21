@@ -13,9 +13,9 @@ font-family: 'Sorts Mill Goudy', serif;
 
 :root {
     --headfont: 'goudy bookletter 1911';
-    --headfontsize: 3rem;
+    --headfontsize: max(3vw,25pt);
     --textfont: 'barlow';
-    --textfontsize: 1.6rem;
+    --textfontsize: max(1.6vw,15pt);
 
     --dark: black;
     --meddark: rgb(80, 80, 80);
@@ -340,8 +340,8 @@ footer,
 .imagegallery {
     grid-template-columns: 1fr;
     grid-auto-flow: dense;
-    grid-gap: calc(1vw + var(--spacing));
-    padding: calc(1vw + var(--spacing));
+    grid-gap: var(--spacing));
+    padding: var(--spacing));
 }
 
 /*
@@ -389,7 +389,7 @@ iframe {
     height: 100%;
 }
 
-@media only screen and (min-width: 1081px) {
+@media only screen and (orientation: landscape), screen and (min-width: 700px) {
 
 /*
     Classes for grid layouts on tablet/desktop.
