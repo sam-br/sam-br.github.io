@@ -340,8 +340,8 @@ footer,
 .imagegallery {
     grid-template-columns: 1fr;
     grid-auto-flow: dense;
-    grid-gap: var(--spacing));
-    padding: var(--spacing));
+    grid-gap: var(--spacing);
+    padding: var(--spacing);
 }
 
 /*
@@ -384,15 +384,37 @@ img {
 }   
 
 iframe {
-    object-fit: scale-down;
+    object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+.youtube {
+    width: 100%;
+    height: auto;
+}
+
+.youtube {
+	padding-bottom: 56.25%;
+    height: 0;
+    position: relative;
+	padding-top: 30px;
+	overflow: hidden;
+}
+.youtube iframe, 
+.youtube object, 
+.youtube embed {
+	position: absolute;
+	left: 0;
+    top: 0;
+	width: 100%;
+	height: 100%;
 }
 
 @media only screen and (orientation: landscape), screen and (min-width: 700px) {
 
 /*
-    Classes for grid layouts on tablet/desktop.
+    Classes for grid layouts greated than 700px wide and landscape orientation.
 */
 
 header {
@@ -417,7 +439,8 @@ header {
 }
 
 .fourcolumns {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    /* --- Four columns allowed in media query below for over 1000px wide --- */
 }
 
 /*
@@ -460,4 +483,16 @@ header {
     grid-area: span 1 / span 2;
 }
 
+}
+
+@media only screen and (orientation: landscape), screen and (min-width: 1000px) {
+
+/*
+    This is just to exapnd the fourcolumns grid to the full four columns.
+*/
+
+    .fourcolumns {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
 }
