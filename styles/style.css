@@ -409,7 +409,7 @@ iframe {
 	height: 100%;
 }
 
-@media only screen and (orientation: landscape), screen and (min-width: 700px) {
+@media only screen and (orientation: landscape) and (min-width: 700px) {
 
 /*
     Classes for grid layouts greated than 700px wide and landscape orientation.
