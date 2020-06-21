@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>Balalaika Chord Generator</title>
+<link rel="icon" type="image/png" href="sbricon32.png">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Goudy+Bookletter+1911&family=Sorts+Mill+Goudy:ital@1&display=swap" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='styles/engine.css'>
+<link rel='stylesheet' type='text/css' href='styles/style.css'>
+</head>
+
+<body>
+    <header>
+        <div class='item name span darkbackground lighttext'>Sam B-R</div>
+        <a href='index.html' class='headitem greentitle greenbackground'>Home</a>
+        <a href='music.html' class='headitem bluetitle bluebackground'>Music</a>
+        <a href='photo.html' class='headitem pinktitle pinkbackground'>Photo</a>
+        <a href='other.html' class='headitem yellowtitle yellowbackground'>Other</a>
+    </header>
+
+    <div class='onecolumn margin darktext rainbow-h'>
+        <h1>Scale and Chord Finding Engines</h1>
+    </div>
+
+
+    <p class='darkbackground yellowtext margin'>Choose the root note and this will tell you the notes in the chord and scale selected.</p>
+
+    <div class='twocolumns margin'>
+
+        <div id=chord class='darkbackground yellowtext'>
+            <h1>Chord Engine</h1>
+            <div>
+                <select id='selectchordnote'>
+                    <option value='Ab'>Ab</option>
+                    <option selected value='A'>A</option>
+                    <option value='A#'>A#</option>
+                    <option value='Bb'>Bb</option>
+                    <option value='B'>B</option>
+                    <option value='C'>C</option>
+                    <option value='C#'>C#</option>
+                    <option value='Db'>Db</option>
+                    <option value='D'>D</option>
+                    <option value='D#'>D#</option>
+                    <option value='Eb'>Eb</option>
+                    <option value='E'>E</option>
+                    <option value='F'>F</option>
+                    <option value='F#'>F#</option>
+                    <option value='Gb'>Gb</option>
+                    <option value='G'>G</option>
+                    <option value='G#'>G#</option>
+                </select>
+                <label for='selectnote'>Note</label><br>
+            </div>
+            <div>
+                <select id='selectchord' class='selections'>
+                    <option disabled>- major chords -</option>
+                    <option selected value='Major'>Major</option>
+                    <option value='Major 6'>Major 6 (M6)</option>
+                    <option value='Dominant 7'>Dominant 7 (7)</option>
+                    <option value='Major 7'>Major 7 (M7)</option>
+                    <option value='Augmented'>Augmented (aug)</option>
+            
+                    <option disabled>- minor chords -</option>
+                    <option value='Minor'>Minor (m)</option>
+                    <option value='Minor 6'>Minor 6 (m6)</option>
+                    <option value='Minor 7'>Minor 7 (m7)</option>
+                    <option value='Minor Major 7'>Minor Major 7 (mM7)</option>
+            
+                    <option disabled>- minor chords with b5 -</option>
+                    <option value='Half Diminished'>Half Diminished (m7b5)</option>
+                    <option value='Diminished'>Diminished (dim)</option>
+                </select>
+                <label for='selectchord'>Chord</label><br>    
+            </div>
+            <p id='chordnotes'></p>
+        </div>
+
+        <div id='scale' class='darkbackground yellowtext'>
+            <h1>Scale Engine</h2>
+            <select id='selectscalenote'>
+                <option value='Ab'>Ab</option>
+                <option selected value='A'>A</option>
+                <option value='A#'>A#</option>
+                <option value='Bb'>Bb</option>
+                <option value='B'>B</option>
+                <option value='C'>C</option>
+                <option value='C#'>C#</option>
+                <option value='Db'>Db</option>
+                <option value='D'>D</option>
+                <option value='D#'>D#</option>
+                <option value='Eb'>Eb</option>
+                <option value='E'>E</option>
+                <option value='F'>F</option>
+                <option value='F#'>F#</option>
+                <option value='Gb'>Gb</option>
+                <option value='G'>G</option>
+                <option value='G#'>G#</option>
+            </select>
+            <label for='selectnote'>Note</label><br>
+
+            <select id='selectscale' class='selections'>
+                <option disabled>- standard Major/Minor -</option>
+                <option selected value='Major/Ionian'>Major</option>
+                <option value='Minor/Aeolian'>Minor</option>
+                <option disabled>- other minor scales -</option>
+                <option value='Harmonic Minor'>Harmonic Minor</option>
+                <option value='Melodic Minor'>Melodic Minor</option>
+                <option disabled>- diatonic modes -</option>
+                <option value='Major/Ionian'>1) Ionian (Major)</option>
+                <option value='Dorian'>2) Dorian</option>
+                <option value='Phrygian'>3) Phrygian</option>
+                <option value='Lydian'>4) Lydian</option>
+                <option value='Mixolydian'>5) Mixolydian</option>
+                <option value='Minor/Aeolian'>6) Aeolian (Minor)</option>
+                <option value='Locrian'>7) Locrian</option>
+                <option disabled>- other scales -</option>
+                <option value='Diminished'>Diminished</option>
+                <option value='Whole Tone'>Whole Tone</option>
+            </select>
+            <label for='selectscale'>Scale</label><br>
+            <p id='scalenotes'></p>
+        </div>
+    
+    </div>
+
+</body>
+
+<script src='scripts/engine.js'></script>
