@@ -232,10 +232,9 @@ function calc_scale_notenames(root_notename,scalename) {
 
 function log_variables() {
     console.log(`LOG_VARIABLES START
-current_letter: ${variables.current_letter}
-current_accidental: ${variables.current_accidental}
-current_notename: ${variables.current_notename}
+current_chord_notename: ${variables.current_chord_notename}
 current_chord: ${variables.current_chord}
+current_scale_note: ${variables.current_scale_notename}
 current_scale: ${variables.current_scale}
 LOG_VARIABLES END`)
 }
@@ -243,32 +242,26 @@ LOG_VARIABLES END`)
 // Workspace
 
 let variables = {
-    current_accidental : '',
     current_chord_notename : 'A',
     current_chord : 'Major',
     current_scale_notename : 'A',
-    current_scale : 'Major',
+    current_scale : 'Major/Ionian',
 }
 
-document.getElementById('selectchordnote').addEventListener('click',getselected)
-document.getElementById('selectchord').addEventListener('click',getselected)
-document.getElementById('selectscalenote').addEventListener('click',getselected)
-document.getElementById('selectscale').addEventListener('click',getselected)
+document.getElementById('selectchordnote').addEventListener('change',calc_and_push_chord)
+document.getElementById('selectchord').addEventListener('change',calc_and_push_chord)
+document.getElementById('selectscalenote').addEventListener('change',calc_and_push_scale)
+document.getElementById('selectscale').addEventListener('change',calc_and_push_scale)
 
-getselected()
-
-function getselected() {
-    console.log(`Option clicked or changed!`)
+function calc_and_push_chord() {
+    console.log(`\n\n\n\nChord calculating!`)
+    console.log(scales)
 
     chordnote_form = document.getElementById('selectchordnote')
     chord_form = document.getElementById('selectchord')
 
-    scalenote_form = document.getElementById('selectscalenote')
-    scale_form = document.getElementById('selectscale')
-
-    variables.current_scale_notename = scalenote_form.value
-    variables.current_scale = scale_form.value
     variables.current_chord_notename = chordnote_form.value
+    console.log(variables.current_chord_notename)
     variables.current_chord = chord_form.value
 
     log_variables()
@@ -279,3 +272,24 @@ function getselected() {
     document.getElementById('chordnotes').innerHTML = `The notes for the selected chord are ${chordnotes}`
     document.getElementById('scalenotes').innerHTML = `The notes for the selected scale are ${scalenotes}`
 }
+
+function calc_and_push_scale() {
+    console.log(`\n\n\n\nScale calculating!`)
+
+    scalenote_form = document.getElementById('selectscalenote')
+    scale_form = document.getElementById('selectscale')
+
+    variables.current_scale_notename = scalenote_form.value
+    variables.current_scale = scale_form.value
+
+    log_variables()
+
+    chordnotes = calc_chord_notenames(variables.current_chord_notename,variables.current_chord)
+    scalenotes = calc_scale_notenames(variables.current_scale_notename,variables.current_scale)
+
+    document.getElementById('chordnotes').innerHTML = `The notes for the selected chord are ${chordnotes}`
+    document.getElementById('scalenotes').innerHTML = `The notes for the selected scale are ${scalenotes}`
+}
+
+calc_and_push_chord()
+calc_and_push_scale()

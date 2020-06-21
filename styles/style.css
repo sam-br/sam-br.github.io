@@ -414,14 +414,12 @@ iframe {
 */
 
 select {
-    width: 300px;
+    width: 60%;
     font-family: 'Barlow';
     font-size: var(--textfontsize);
-    border: 1px;
-    border-color: darkgoldenrod;
+    border: none;
     border-radius: 0;
-    padding: 10px;
-    margin: 4px;
+    padding: 1vw;
     background-color: black;
     color: lightgreen;
 }
