@@ -74,11 +74,11 @@ const scales = {
 const accidentals = [
     { 'symbol' : 'bbb', 'offset' : -3 , 'name' : ' Triple Flat'},
     { 'symbol' : 'bb' , 'offset' : -2 , 'name' : ' Double Flat'},
-    { 'symbol' : 'b'  , 'offset' : -1 , 'name' : ' Flat'},
+    { 'symbol' : '&#9837'  , 'offset' : -1 , 'name' : ' Flat'},
     { 'symbol' : ''   , 'offset' :  0 , 'name' : ' Natural'},
-    { 'symbol' : '#'  , 'offset' :  1 , 'name' : ' Sharp'},
-    { 'symbol' : '##' , 'offset' :  2 , 'name' : ' Double Sharp'},
-    { 'symbol' : '###', 'offset' :  3 , 'name' : ' Triple Sharp'}
+    { 'symbol' : '&#9839'  , 'offset' :  1 , 'name' : ' Sharp'},
+    { 'symbol' : '&#119082' , 'offset' :  2 , 'name' : ' Double Sharp'},
+    { 'symbol' : '&#119083', 'offset' :  3 , 'name' : ' Triple Sharp'}
 ]
 
 const balalaika_strings = [-5,-5,0]

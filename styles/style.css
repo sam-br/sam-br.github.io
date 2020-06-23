@@ -425,16 +425,16 @@ select {
     border-radius: 0;
     padding: 1vw;
     background-color: black;
-    color: lightgreen;
+    color: var(--green);
 }
 
 select option:disabled {
-    color: pink;
+    color: var(--pink);
     font-style: italic;
 }
 
 select option:checked {
-    color: yellow
+    color: var(--blue)
 }
 
 

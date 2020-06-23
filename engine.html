@@ -6,7 +6,6 @@
 <title>Balalaika Chord Generator</title>
 <link rel="icon" type="image/png" href="sbricon32.png">
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Goudy+Bookletter+1911&family=Sorts+Mill+Goudy:ital@1&display=swap" rel="stylesheet">
-<link rel='stylesheet' type='text/css' href='styles/engine.css'>
 <link rel='stylesheet' type='text/css' href='styles/style.css'>
 </head>
 
@@ -24,7 +23,13 @@
     </div>
 
 
-    <p class='darkbackground yellowtext margin'>Choose the root note and this will tell you the notes in the chord and scale selected.</p>
+    <p class='darkbackground yellowtext margin'>Choose the root note and this will tell you the notes in the chord and scale selected.
+        <br>Symbols used on this page:
+        <br>Sharp: &#9839
+        <br>Flat: &#9837
+        <br>Double Sharp: &#119082
+        <br>Double Flat: &#119083
+    </p>
 
     <div class='twocolumns margin'>
 
@@ -32,23 +37,23 @@
             <h1>Chord Engine</h1>
             <div>
                 <select id='selectchordnote'>
-                    <option value='Ab'>Ab</option>
+                    <option value='Ab'>A&#9837</option>
                     <option selected value='A'>A</option>
-                    <option value='A#'>A#</option>
-                    <option value='Bb'>Bb</option>
+                    <option value='A#'>A&#9839</option>
+                    <option value='Bb'>B&#9837</option>
                     <option value='B'>B</option>
                     <option value='C'>C</option>
-                    <option value='C#'>C#</option>
-                    <option value='Db'>Db</option>
+                    <option value='C#'>C&#9839</option>
+                    <option value='Db'>D&#9837</option>
                     <option value='D'>D</option>
-                    <option value='D#'>D#</option>
-                    <option value='Eb'>Eb</option>
+                    <option value='D#'>D&#9839</option>
+                    <option value='Eb'>E&#9837</option>
                     <option value='E'>E</option>
                     <option value='F'>F</option>
-                    <option value='F#'>F#</option>
-                    <option value='Gb'>Gb</option>
+                    <option value='F#'>F&#9839</option>
+                    <option value='Gb'>G&#9837</option>
                     <option value='G'>G</option>
-                    <option value='G#'>G#</option>
+                    <option value='G#'>G&#9839</option>
                 </select>
                 <label for='selectnote'>Note</label><br>
             </div>
@@ -79,23 +84,23 @@
         <div id='scale' class='darkbackground yellowtext'>
             <h1>Scale Engine</h2>
             <select id='selectscalenote'>
-                <option value='Ab'>Ab</option>
+                <option value='Ab'>A&#9837</option>
                 <option selected value='A'>A</option>
-                <option value='A#'>A#</option>
-                <option value='Bb'>Bb</option>
+                <option value='A#'>A&#9839</option>
+                <option value='Bb'>B&#9837</option>
                 <option value='B'>B</option>
                 <option value='C'>C</option>
-                <option value='C#'>C#</option>
-                <option value='Db'>Db</option>
+                <option value='C#'>C&#9839</option>
+                <option value='Db'>D&#9837</option>
                 <option value='D'>D</option>
-                <option value='D#'>D#</option>
-                <option value='Eb'>Eb</option>
+                <option value='D#'>D&#9839</option>
+                <option value='Eb'>E&#9837</option>
                 <option value='E'>E</option>
                 <option value='F'>F</option>
-                <option value='F#'>F#</option>
-                <option value='Gb'>Gb</option>
+                <option value='F#'>F&#9839</option>
+                <option value='Gb'>G&#9837</option>
                 <option value='G'>G</option>
-                <option value='G#'>G#</option>
+                <option value='G#'>G&#9839</option>
             </select>
             <label for='selectnote'>Note</label><br>
 
