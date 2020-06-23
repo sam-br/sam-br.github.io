@@ -13,7 +13,7 @@ font-family: 'Sorts Mill Goudy', serif;
 
 :root {
     --headfont: 'goudy bookletter 1911';
-    --headfontsize: max(3vw,25pt);
+    --headfontsize: max(3vw,30pt);
     --textfont: 'barlow';
     --textfontsize: max(1.6vw,15pt);
 
@@ -274,7 +274,7 @@ a {
 }
 
 /*
-    Classes for font styling of items.
+    Classes for font styling and sizing of items.
 */
 
 h1, p {
@@ -294,7 +294,7 @@ text, p {
 }
 
 .smalltext {
-    font-size: 1.5rem;
+    font-size: var(--textfontsize);
 }
 
 /*
@@ -385,6 +385,10 @@ img {
 
 iframe {
     object-fit: cover;
+}
+
+.soundcloud {
+    font-size: var(--textfontsize);
 }
 
 .youtube {
