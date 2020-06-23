@@ -37,8 +37,8 @@ const notename_convert = {
 }
 
 const notenum_to_notename = {
-    'sharps' : ['A','A#','B','C','C#','D','D#','E','F','F#','G','G#'],
-    'flats'  : ['A','Bb','B','C','Db','D','Eb','E','F','Gb','G','Ab']
+    'sharps' : ['A','A&#9839','B','C','C&#9839','D','D&#9839','E','F','F&#9839','G','G&#9839'],
+    'flats'  : ['A','B&#9837','B','C','D&#9837','D','E&#9837','E','F','G&#9837','G','A&#9837']
 }
 
 const degreenum_to_degreeletter = ['A','B','C','D','E','F','G']
@@ -58,12 +58,12 @@ const chords = {
 }
 
 const scales = {
-    'Major/Ionian'   : { 'intervals' : [0,2,4,5,7,9,11,12], 'scaletype' : 'diatonic' },
+    'Ionian'         : { 'intervals' : [0,2,4,5,7,9,11,12], 'scaletype' : 'diatonic' },
     'Dorian'         : { 'intervals' : [0,2,3,5,7,9,10,12], 'scaletype' : 'diatonic' },
     'Phrygian'       : { 'intervals' : [0,1,3,5,7,8,10,12], 'scaletype' : 'diatonic' },
     'Lydian'         : { 'intervals' : [0,2,4,6,7,9,11,12], 'scaletype' : 'diatonic' },
     'Mixolydian'     : { 'intervals' : [0,2,4,5,7,9,10,12], 'scaletype' : 'diatonic' },
-    'Minor/Aeolian'  : { 'intervals' : [0,2,3,5,7,8,10,12], 'scaletype' : 'diatonic' },
+    'Aeolian'        : { 'intervals' : [0,2,3,5,7,8,10,12], 'scaletype' : 'diatonic' },
     'Locrian'        : { 'intervals' : [0,1,3,5,6,8,10,12], 'scaletype' : 'diatonic' },
     'Harmonic Minor' : { 'intervals' : [0,2,3,5,7,8,11,12], 'scaletype' : 'diatonic' },
     'Melodic Minor'  : { 'intervals' : [0,2,3,5,7,9,11,12], 'scaletype' : 'diatonic' },
@@ -73,12 +73,12 @@ const scales = {
 
 const accidentals = [
     { 'symbol' : 'bbb', 'offset' : -3 , 'name' : ' Triple Flat'},
-    { 'symbol' : 'bb' , 'offset' : -2 , 'name' : ' Double Flat'},
+    { 'symbol' : '&#119083' , 'offset' : -2 , 'name' : ' Double Flat'},
     { 'symbol' : '&#9837'  , 'offset' : -1 , 'name' : ' Flat'},
     { 'symbol' : ''   , 'offset' :  0 , 'name' : ' Natural'},
     { 'symbol' : '&#9839'  , 'offset' :  1 , 'name' : ' Sharp'},
     { 'symbol' : '&#119082' , 'offset' :  2 , 'name' : ' Double Sharp'},
-    { 'symbol' : '&#119083', 'offset' :  3 , 'name' : ' Triple Sharp'}
+    { 'symbol' : '###', 'offset' :  3 , 'name' : ' Triple Sharp'}
 ]
 
 const balalaika_strings = [-5,-5,0]
@@ -245,7 +245,7 @@ let variables = {
     current_chord_notename : 'A',
     current_chord : 'Major',
     current_scale_notename : 'A',
-    current_scale : 'Major/Ionian',
+    current_scale : 'Ionian',
 }
 
 document.getElementById('selectchordnote').addEventListener('change',calc_and_push_chord)
@@ -287,8 +287,8 @@ function calc_and_push_scale() {
     chordnotes = calc_chord_notenames(variables.current_chord_notename,variables.current_chord)
     scalenotes = calc_scale_notenames(variables.current_scale_notename,variables.current_scale)
 
-    document.getElementById('chordnotes').innerHTML = `The notes for the selected chord are ${chordnotes}`
-    document.getElementById('scalenotes').innerHTML = `The notes for the selected scale are ${scalenotes}`
+    document.getElementById('chordnotes').innerHTML = chordnotes
+    document.getElementById('scalenotes').innerHTML = scalenotes
 }
 
 calc_and_push_chord()

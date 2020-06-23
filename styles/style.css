@@ -18,6 +18,7 @@ font-family: 'Sorts Mill Goudy', serif;
     --textfontsize: max(1.6vw,15pt);
 
     --dark: black;
+    --verydark: rgb(39, 39, 39);
     --meddark: rgb(80, 80, 80);
     --light: white;
 
@@ -297,6 +298,10 @@ text, p {
     font-size: var(--textfontsize);
 }
 
+.largetext {
+    font-size: calc(var(--textfontsize)*1.5)
+}
+
 /*
     Classes for defining grid layouts.
     ALL grid items should be in the first list then a separate entry for layout specifics.
@@ -419,13 +424,20 @@ iframe {
 
 select {
     width: 60%;
+    height: 70px;
     font-family: 'Barlow';
-    font-size: var(--textfontsize);
+    font-size: calc(var(--textfontsize)*1.5);
     border: none;
     border-radius: 0;
-    padding: 1vw;
-    background-color: black;
+    border: var(--meddark);
+    border-width: 3px;
+    border-style: solid;
+    margin: 1vw;
+    padding: 0 15px;
+    border-radius: 999px;
+    background-color: var(--dark);
     color: var(--green);
+    text-align-last: center;
 }
 
 select option:disabled {

@@ -23,12 +23,7 @@
     </div>
 
 
-    <p class='darkbackground yellowtext margin'>Choose the root note and this will tell you the notes in the chord and scale selected.
-        <br>Symbols used on this page:
-        <br>Sharp: &#9839
-        <br>Flat: &#9837
-        <br>Double Sharp: &#119082
-        <br>Double Flat: &#119083
+    <p class='darkbackground yellowtext margin'>Choose the root note and this will tell you the notes in the chord and scale selected. Symbols used on this page include: &#9839 (Sharp), &#9837 (Flat), &#119082 (Double Sharp), &#119083 (Double Flat).
     </p>
 
     <div class='twocolumns margin'>
@@ -78,7 +73,8 @@
                 </select>
                 <label for='selectchord'>Chord</label><br>    
             </div>
-            <p id='chordnotes'></p>
+            <p>The notes for the selected chord are:</p>
+            <p class='largetext lighttext' id='chordnotes'></p>
         </div>
 
         <div id='scale' class='darkbackground yellowtext'>
@@ -106,25 +102,26 @@
 
             <select id='selectscale' class='selections'>
                 <option disabled>- standard Major/Minor -</option>
-                <option selected value='Major/Ionian'>Major</option>
-                <option value='Minor/Aeolian'>Minor</option>
+                <option selected value='Ionian'>Major</option>
+                <option value='Aeolian'>Minor</option>
                 <option disabled>- other minor scales -</option>
                 <option value='Harmonic Minor'>Harmonic Minor</option>
                 <option value='Melodic Minor'>Melodic Minor</option>
                 <option disabled>- diatonic modes -</option>
-                <option value='Major/Ionian'>1) Ionian (Major)</option>
+                <option value='Ionian'>1) Ionian (Major)</option>
                 <option value='Dorian'>2) Dorian</option>
                 <option value='Phrygian'>3) Phrygian</option>
                 <option value='Lydian'>4) Lydian</option>
                 <option value='Mixolydian'>5) Mixolydian</option>
-                <option value='Minor/Aeolian'>6) Aeolian (Minor)</option>
+                <option value='Aeolian'>6) Aeolian (Minor)</option>
                 <option value='Locrian'>7) Locrian</option>
                 <option disabled>- other scales -</option>
                 <option value='Diminished'>Diminished</option>
                 <option value='Whole Tone'>Whole Tone</option>
             </select>
             <label for='selectscale'>Scale</label><br>
-            <p id='scalenotes'></p>
+            <p>The notes for the selected scale are:</p>
+            <p class='largetext lighttext' id='scalenotes'></p>
         </div>
     
     </div>
