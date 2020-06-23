@@ -423,10 +423,10 @@ iframe {
 */
 
 select {
-    width: 60%;
+    width: 80%;
     height: max(5vw,60px);
     font-family: 'Barlow';
-    font-size: calc(var(--textfontsize)*1.5);
+    font-size: calc(var(--textfontsize)*1.2);
     border: none;
     border-radius: 0;
     border: var(--meddark);

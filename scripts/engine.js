@@ -58,28 +58,115 @@ const chords = {
 }
 
 const scales = {
-    'Ionian'         : { 'intervals' : [0,2,4,5,7,9,11,12], 'scaletype' : 'diatonic', 'degrees': [1,2,3,4,5,6,7,8] },
-    'Dorian'         : { 'intervals' : [0,2,3,5,7,9,10,12], 'scaletype' : 'diatonic', 'degrees': [1,2,3,4,5,6,7,8] },
-    'Phrygian'       : { 'intervals' : [0,1,3,5,7,8,10,12], 'scaletype' : 'diatonic', 'degrees': [1,2,3,4,5,6,7,8] },
-    'Lydian'         : { 'intervals' : [0,2,4,6,7,9,11,12], 'scaletype' : 'diatonic', 'degrees': [1,2,3,4,5,6,7,8] },
-    'Mixolydian'     : { 'intervals' : [0,2,4,5,7,9,10,12], 'scaletype' : 'diatonic', 'degrees': [1,2,3,4,5,6,7,8] },
-    'Aeolian'        : { 'intervals' : [0,2,3,5,7,8,10,12], 'scaletype' : 'diatonic', 'degrees': [1,2,3,4,5,6,7,8] },
-    'Locrian'        : { 'intervals' : [0,1,3,5,6,8,10,12], 'scaletype' : 'diatonic', 'degrees': [1,2,3,4,5,6,7,8] },
-    'Harmonic Minor' : { 'intervals' : [0,2,3,5,7,8,11,12], 'scaletype' : 'diatonic', 'degrees': [1,2,3,4,5,6,7,8] },
-    'Melodic Minor'  : { 'intervals' : [0,2,3,5,7,9,11,12], 'scaletype' : 'diatonic', 'degrees': [1,2,3,4,5,6,7,8] },
-    'Diminished'     : { 'intervals' : [0,2,3,5,6,8,9,11,12], 'scaletype' : 'other' , 'degrees': [0,0,0,0,0,0,0,0,0] },
-    'Whole Tone'     : { 'intervals' : [0,2,4,6,8,10,12],   'scaletype' : 'other'   , 'degrees': [0,0,0,0,0,0,0] },
-    'Blues'          : { 'intervals' : [0,3,5,6,7,10,12],   'scaletype' : 'other'   , 'degrees': [1,3,4,4,5,7,8] }
+    // Diatonic Modes
+    'Ionian': {
+        'intervals' : [0,2,4,5,7,9,11,12],
+        'degrees': [1,2,3,4,5,6,7,8],
+        'scaletype' : 'diatonic'
+        },
+    'Dorian' : {
+        'intervals' : [0,2,3,5,7,9,10,12],
+        'degrees': [1,2,3,4,5,6,7,8],
+        'scaletype' : 'diatonic'
+        },
+    'Phrygian' : {
+        'intervals' : [0,1,3,5,7,8,10,12],
+        'degrees': [1,2,3,4,5,6,7,8],
+        'scaletype' : 'diatonic'
+        },
+    'Lydian' : {
+        'intervals' : [0,2,4,6,7,9,11,12],
+        'degrees': [1,2,3,4,5,6,7,8],
+        'scaletype' : 'diatonic'
+        },
+    'Mixolydian' : {
+        'intervals' : [0,2,4,5,7,9,10,12],
+        'degrees': [1,2,3,4,5,6,7,8],
+        'scaletype' : 'diatonic'
+        },
+    'Aeolian' : {
+        'intervals' : [0,2,3,5,7,8,10,12],
+        'degrees': [1,2,3,4,5,6,7,8],
+        'scaletype' : 'diatonic'
+        },
+    'Locrian' : {
+        'intervals' : [0,1,3,5,6,8,10,12],
+        'degrees': [1,2,3,4,5,6,7,8],
+        'scaletype' : 'diatonic'
+    },
+    // Harmonic Minor
+    'Harmonic Minor' : {
+        'intervals' : [0,2,3,5,7,8,11,12],
+        'degrees': [1,2,3,4,5,6,7,8],
+        'scaletype' : 'harmonicminor'
+    },
+    //Melodic Minor
+    'Melodic Minor' : {
+        'intervals' : [0,2,3,5,7,9,11,12],
+        'degrees': [1,2,3,4,5,6,7,8],
+        'scaletype' : 'melodicminor'
+    },
+    'Dorian Flat 2' : {
+        'intervals' : [0,1,3,5,7,9,10,12],
+        'degrees' : [1,2,3,4,5,6,7,8],
+        'scaletype' : 'melodicminor'
+    },
+    'Lydian Augmented' : {
+        'intervals' : [0,2,4,6,8,9,11,12],
+        'degrees' : [1,2,3,4,5,6,7,8],
+        'scaletype' : 'melodicminor'
+    },
+    'Lydian Dominant' : {
+        'intervals' : [0,2,4,6,7,9,10,12],
+        'degrees' : [1,2,3,4,5,6,7,8],
+        'scaleltype' : 'melodicminor'
+    },
+    'Mixolydian Flat 6' : {
+        'intervals' : [0,2,4,5,7,8,10,12],
+        'degrees' : [1,2,3,4,5,6,7,8],
+        'scaletype' : 'melodicminor'
+    },
+    'Locrian Natural 2' : {
+        'intervals' : [0,2,3,5,6,8,10,12],
+        'degrees' : [1,2,3,4,5,6,7,8],
+        'scaletype' : 'melodicminor'
+    },
+    'Super Locrian' : {
+        'intervals' : [0,1,3,4,6,8,10,12],
+        'degrees' : [1,2,3,4,5,6,7,8],
+        'scaletype' : 'melodicminor'
+    },
+    //Other
+    'Diminished' : {
+        'intervals' : [0,2,3,5,6,8,9,11,12],
+        'degrees': [0,0,0,0,0,0,0,0,0],
+        'scaletype' : 'other',
+    },
+    'Whole Tone' : {
+        'intervals' : [0,2,4,6,8,10,12],
+        'degrees': [0,0,0,0,0,0,0],
+        'scaletype' : 'other'
+    },
+    'Blues' : {
+        'intervals' : [0,3,5,6,7,10,12],
+        'degrees': [1,3,4,4,5,7,8],
+        'scaletype' : 'other'
+    },
+    'Hungarian Minor': {
+        'intervals' : [0,2,3,6,7,8,11,12],
+        'degrees': [1,2,3,4,5,6,7,8],
+        'scaletype' : 'hungarianminor'
+    }
 }
 
 const accidentals = [
-    { 'symbol' : 'bbb',      'offset' : -3 , 'name' : ' Triple Flat'},
+    { 'symbol' : '&#9837&#9837&#9837', 'offset' : -3 , 'name' : ' Triple Flat'},
     { 'symbol' : '&#119083', 'offset' : -2 , 'name' : ' Double Flat'},
     { 'symbol' : '&#9837',   'offset' : -1 , 'name' : ' Flat'},
     { 'symbol' : '',         'offset' :  0 , 'name' : ' Natural'},
     { 'symbol' : '&#9839',   'offset' :  1 , 'name' : ' Sharp'},
     { 'symbol' : '&#119082', 'offset' :  2 , 'name' : ' Double Sharp'},
-    { 'symbol' : '###',      'offset' :  3 , 'name' : ' Triple Sharp'}
+    { 'symbol' : '&#9839&#119082', 'offset' :  3 , 'name' : ' Triple Sharp'}
 ]
 
 const balalaika_strings = [-5,-5,0]
