@@ -269,8 +269,7 @@ function calc_and_push_chord() {
     chordnotes = calc_chord_notenames(variables.current_chord_notename,variables.current_chord)
     scalenotes = calc_scale_notenames(variables.current_scale_notename,variables.current_scale)
 
-    document.getElementById('chordnotes').innerHTML = `The notes for the selected chord are ${chordnotes}`
-    document.getElementById('scalenotes').innerHTML = `The notes for the selected scale are ${scalenotes}`
+    document.getElementById('chordnotes').innerHTML = chordnotes
 }
 
 function calc_and_push_scale() {
@@ -287,7 +286,6 @@ function calc_and_push_scale() {
     chordnotes = calc_chord_notenames(variables.current_chord_notename,variables.current_chord)
     scalenotes = calc_scale_notenames(variables.current_scale_notename,variables.current_scale)
 
-    document.getElementById('chordnotes').innerHTML = chordnotes
     document.getElementById('scalenotes').innerHTML = scalenotes
 }
 
