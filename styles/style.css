@@ -424,7 +424,7 @@ iframe {
 
 select {
     width: 60%;
-    height: 70px;
+    height: max(5vw,60px);
     font-family: 'Barlow';
     font-size: calc(var(--textfontsize)*1.5);
     border: none;
