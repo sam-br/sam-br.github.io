@@ -58,17 +58,18 @@ const chords = {
 }
 
 const scales = {
-    'Ionian'         : { 'intervals' : [0,2,4,5,7,9,11,12], 'scaletype' : 'diatonic' },
-    'Dorian'         : { 'intervals' : [0,2,3,5,7,9,10,12], 'scaletype' : 'diatonic' },
-    'Phrygian'       : { 'intervals' : [0,1,3,5,7,8,10,12], 'scaletype' : 'diatonic' },
-    'Lydian'         : { 'intervals' : [0,2,4,6,7,9,11,12], 'scaletype' : 'diatonic' },
-    'Mixolydian'     : { 'intervals' : [0,2,4,5,7,9,10,12], 'scaletype' : 'diatonic' },
-    'Aeolian'        : { 'intervals' : [0,2,3,5,7,8,10,12], 'scaletype' : 'diatonic' },
-    'Locrian'        : { 'intervals' : [0,1,3,5,6,8,10,12], 'scaletype' : 'diatonic' },
-    'Harmonic Minor' : { 'intervals' : [0,2,3,5,7,8,11,12], 'scaletype' : 'diatonic' },
-    'Melodic Minor'  : { 'intervals' : [0,2,3,5,7,9,11,12], 'scaletype' : 'diatonic' },
-    'Diminished'     : { 'intervals' : [0,2,3,5,6,8,9,11,12], 'scaletype' : 'other'  },
-    'Whole Tone'     : { 'intervals' : [0,2,4,6,8,10,12],   'scaletype' : 'other'    },
+    'Ionian'         : { 'intervals' : [0,2,4,5,7,9,11,12], 'scaletype' : 'diatonic', 'degrees': [1,2,3,4,5,6,7,8] },
+    'Dorian'         : { 'intervals' : [0,2,3,5,7,9,10,12], 'scaletype' : 'diatonic', 'degrees': [1,2,3,4,5,6,7,8] },
+    'Phrygian'       : { 'intervals' : [0,1,3,5,7,8,10,12], 'scaletype' : 'diatonic', 'degrees': [1,2,3,4,5,6,7,8] },
+    'Lydian'         : { 'intervals' : [0,2,4,6,7,9,11,12], 'scaletype' : 'diatonic', 'degrees': [1,2,3,4,5,6,7,8] },
+    'Mixolydian'     : { 'intervals' : [0,2,4,5,7,9,10,12], 'scaletype' : 'diatonic', 'degrees': [1,2,3,4,5,6,7,8] },
+    'Aeolian'        : { 'intervals' : [0,2,3,5,7,8,10,12], 'scaletype' : 'diatonic', 'degrees': [1,2,3,4,5,6,7,8] },
+    'Locrian'        : { 'intervals' : [0,1,3,5,6,8,10,12], 'scaletype' : 'diatonic', 'degrees': [1,2,3,4,5,6,7,8] },
+    'Harmonic Minor' : { 'intervals' : [0,2,3,5,7,8,11,12], 'scaletype' : 'diatonic', 'degrees': [1,2,3,4,5,6,7,8] },
+    'Melodic Minor'  : { 'intervals' : [0,2,3,5,7,9,11,12], 'scaletype' : 'diatonic', 'degrees': [1,2,3,4,5,6,7,8] },
+    'Diminished'     : { 'intervals' : [0,2,3,5,6,8,9,11,12], 'scaletype' : 'other' , 'degrees': [0,0,0,0,0,0,0,0,0] },
+    'Whole Tone'     : { 'intervals' : [0,2,4,6,8,10,12],   'scaletype' : 'other'   , 'degrees': [0,0,0,0,0,0,0] },
+    'Blues'          : { 'intervals' : [0,3,5,6,7,10,12],   'scaletype' : 'other'   , 'degrees': [1,3,4,4,5,7,8] }
 }
 
 const accidentals = [
@@ -202,7 +203,6 @@ function calc_scale_notenames(root_notename,scalename) {
     }
     console.log(`[calc] sharps_or_flats: ${sharps_or_flats}`)
 
-
     root_notenum = notename_convert[root_notename]['notenum']
     console.log(`[calc] root_notenum: ${root_notenum}`)
 
@@ -214,17 +214,19 @@ function calc_scale_notenames(root_notename,scalename) {
 
     scale_notenames = []
 
-    if (scales[scalename]['intervals'].length == 8) {
-        for (i = 0; i < scales[scalename]['intervals'].length; i++) {
-            console.log(`[loopstart] scale_note_${i}`)
-            scale_note_x = calc_harmonic_interval_result(root_notename,scales[scalename]['intervals'][i],i + 1)
-            scale_notenames.push(scale_note_x)
-            console.log(`[loopresult] scale_note_${i}: ${scale_note_x}`)
+    for (i = 0; i < scales[scalename]['intervals'].length; i++) {
+        console.log(`[loopstart] scale_note_${i}`)
+        if (scales[scalename]['degrees'][i] != 0) {
+            scale_note_y = calc_harmonic_interval_result(
+                root_notename,
+                scales[scalename]['intervals'][i],
+                scales[scalename]['degrees'][i])
+        } else {
+            scale_note_y = notenum_to_notename[sharps_or_flats][(scales[scalename]['intervals'][i] + root_notenum) % 12 ]
         }
-    } else {
-        scales[scalename]['intervals'].forEach(notenum =>(scale_notenames.push(notenum_to_notename[sharps_or_flats][(notenum + root_notenum) % 12 ])))
+        scale_notenames.push(scale_note_y)
+        console.log(`[loopresult] scale_note_${i}: ${scale_note_y}`)
     }
-    
     console.log(`[return] scale_notenames: ${scale_notenames}\nCALC_SCALE_NOTENAMES END`)
 
     return scale_notenames
