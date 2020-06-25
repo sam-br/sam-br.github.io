@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knutsford Helpdesk Notes Helper</title>
+<link rel="icon" type="image/png" href="">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Goudy+Bookletter+1911&family=Sorts+Mill+Goudy:ital@1&display=swap" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='../styles/style.css'>
+</head>
+
+<body>
+    <div class='onecolumn margin'>
+        <h1 class='rainbow-h darktext'>Helpdesk Notes Helper</h1>
+        <div class='darkbackground lighttext'>
+            <p>Fill in each box with comments and click copy to copy the text in one go to the clipboard.</p>
+            <button id='copy' class='greenbutton'>Copy Text To Clipboard</button>
+            <p id='queryresult'>
+                CASE: <span id='case'></span><br>
+                PRODUCT: <span id='product'></span><br>
+                CUSTOMER: <span id='customer'></span>
+            </p>
+        </div>
+
+        <div class='darkbackground lighttext'>
+            <label for='contactname'>Name:</label><br>
+            <input type='text' id='contactname' class='textinput' placeholder='Contact Name'></textarea>
+        </div>
+
+        <div class='darkbackground greentext'>
+            <label for='situation'>What is the situation or status of the machine/issue?</label><br>
+            <textarea id='situation'></textarea>
+        </div>
+
+        <div class='darkbackground bluetext'>
+            <label for='action'>What have site/you done to try and resolve the issue?</label><br>
+            <textarea id='action'></textarea>
+        </div>
+
+        <div class='darkbackground pinktext'>
+            <label for='response'>What was the outcome of the action site/you took? Did it work?</label><br>
+            <textarea id='response'></textarea>
+        </div>
+
+        <div class='darkbackground yellowtext'>
+            <label for='safeaccess'>Is safe access needed and why?</label><br>
+            <textarea id='safeaccess'></textarea>
+        </div>
+
+        <div class='darkbackground lighttext'>
+            <label for='accesstype'>Access Requirements and Opening Times:</label><br>
+            <select id='accesstype'>
+                <option value='Attend in hours - no safe access'>Attend in hours - no safe access</option>
+                <option value='Attend in hours - safe access confirmed ok'>Attend in hours - safe access confirmed ok</option>
+                <option value='Appointment - no safe access'>Appointment - non safe access</option>
+                <option value='Appointment - safe access confirmed ok'>Appointment - safe access confirmed ok</option>
+            </select>
+
+            <div class='threecolumns'>
+
+                <div>
+                    <input type='text' id='mf' class='textinput' placeholder='MF'></textarea>
+                </div>
+
+                <div>
+                    <input type='text' id='sat' class='textinput' placeholder='Sat'></textarea>
+                </div>
+
+                <div>
+                    <input type='text' id='sun' class='textinput' placeholder='Sun'></textarea>
+                </div>
+
+            </div>
+        </div>
+        <p id='finishednote' class='darkbackground lighttext'></p>
+    </div>
+</body>
+<script src='helpdesknotes.js'></script>
+</html>
