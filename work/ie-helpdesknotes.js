@@ -37,7 +37,7 @@ function makeTextNote() {
         appointmentstring = ""
     }
 
-    fulltext = "Open MF " + openmf.value + " Sat " + opensat.value + "Sun " + opensun.value + " | " + accesstype.value + " //  Spoke to " + contactname.value + ", SITUATION: " + situation.value + " ACTION: " + action.value + " RESPONSE: " + response.value + "  //  Safe access needed: " + safeaccess.value + " " + appointmentstring
+    fulltext = "Open MF " + openmf.value + " Sat " + opensat.value + "Sun " + opensun.value + " | " + accesstype.value + "  //  Spoke to " + contactname.value + ", SITUATION: " + situation.value + " ACTION: " + action.value + " RESPONSE: " + response.value + "  //  Safe access needed: " + safeaccess.value + " " + appointmentstring
 
     textToClipboard(fulltext)
     console.log(fulltext)
