@@ -5,7 +5,8 @@
 <title>Knutsford Helpdesk Notes Helper</title>
 <link rel="icon" type="image/png" href="">
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Goudy+Bookletter+1911&family=Sorts+Mill+Goudy:ital@1&display=swap" rel="stylesheet">
-<link rel='stylesheet' type='text/css' href='../styles/style.css'>
+
+<link rel='stylesheet' type='text/css' href='ie-style.css'>
 </head>
 
 <body>
@@ -23,12 +24,12 @@
 
         <div class='darkbackground lighttext'>
             <label for='contactname'>Name:</label><br>
-            <input type='text' id='contactname' class='textinput' placeholder='Contact Name'></textarea>
+            <input type='text' id='contactname' class='textinput' placeholder='Contact Name'>
         </div>
 
         <div class='darkbackground greentext'>
             <label for='situation'>What is the situation or status of the machine/issue?</label><br>
-            <textarea id='situation'></textarea>
+            <textarea id='situation' placeholder='Include all error codes, messages, KOs etc.'></textarea>
         </div>
 
         <div class='darkbackground bluetext'>
@@ -37,7 +38,7 @@
         </div>
 
         <div class='darkbackground pinktext'>
-            <label for='response'>What was the outcome of the action site/you took? Did it work?</label><br>
+            <label for='response'>Did it work? What was the outcome?</label><br>
             <textarea id='response'></textarea>
         </div>
 
@@ -55,18 +56,22 @@
                 <option value='Appointment - safe access confirmed ok'>Appointment - safe access confirmed ok</option>
             </select>
 
-            <div class='threecolumns'>
+            <div class='fourcolumns'>
 
                 <div>
-                    <input type='text' id='mf' class='textinput' placeholder='MF'></textarea>
+                    <input type='text' id='mf' class='textinput' placeholder='MF'>
                 </div>
 
                 <div>
-                    <input type='text' id='sat' class='textinput' placeholder='Sat'></textarea>
+                    <input type='text' id='sat' class='textinput' placeholder='Sat'>
                 </div>
 
                 <div>
-                    <input type='text' id='sun' class='textinput' placeholder='Sun'></textarea>
+                    <input type='text' id='sun' class='textinput' placeholder='Sun'>
+                </div>
+
+                <div>
+                    <input type='text' id='appointment' class='textinput' placeholder='Appointment Date/Time (if applicable)'>
                 </div>
 
             </div>
@@ -74,5 +79,6 @@
         <p id='finishednote' class='darkbackground lighttext'></p>
     </div>
 </body>
-<script src='helpdesknotes.js'></script>
+<!--<script src='helpdesknotes.js'></script>-->
+<!--[if IE]>--><script src='ie-helpdesknotes.js'></script><!--<![endif]-->
 </html>

@@ -22,7 +22,7 @@ html {
     --meddark: rgb(80, 80, 80);
     --light: white;
 
-    --darktolight-h: linear-gradient(to right, var(--dark), var(--light));
+    --darktolight-h: linear-gradient(to right, black, white);
 
     --green: rgb(162, 231, 185);
     --blue: rgb(189, 235, 250);
@@ -34,8 +34,8 @@ html {
     --lightpink: rgb(246, 220, 238);
     --lightyellow: rgb(240, 238, 203); 
 
-    --rainbow-h: linear-gradient(to right, var(--lightgreen), var(--lightblue), var(--lightpink), var(--lightyellow));
-    --rainbowreverse-h: linear-gradient(to left, var(--lightgreen), var(--lightblue), var(--lightpink), var(--lightyellow));
+    --rainbow-h: linear-gradient(to right, rgb(185, 228, 199), rgb(215, 240, 248), rgb(246, 220, 238), rgb(240, 238, 203));
+    --rainbowreverse-h: linear-gradient(to left, rgb(185, 228, 199), rgb(215, 240, 248), rgb(246, 220, 238), rgb(240, 238, 203));
 
     --transitiontime: 0.5s;
 
@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6, p, li, ul {
 }
 
 body {
-    background: var(--meddark);
+    background: rgb(80, 80, 80);
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 0px;
@@ -61,26 +61,26 @@ a {
 }
 
 .headitem {
-    color: var(--dark);
+    color: black;
     padding: 1vw;
-    font-size: var(--headfontsize);
-    font-family: var(--headfont);
+    font-size: max(3vw,20pt);
+    font-family: 'goudy bookletter 1911';
     text-align: center;
     border: hidden;
     text-decoration: none;
     vertical-align: center;
-    transition: var(--transitiontime);
+    transition: 0.5s;
 }
 
 .headitem:hover {
-    background-color: var(--dark);
+    background-color: black;
     cursor: pointer;
 }
 
 .item {
     padding: 1vw;
-    font-size: var(--headfontsize);
-    font-family: var(--headfont);
+    font-size: max(3vw,20pt);
+    font-family: 'goudy bookletter 1911';
     text-align: center;
     border: hidden;
 }
@@ -90,131 +90,131 @@ a {
 */
 
 .darkbackground {
-    background-color: var(--dark);
+    background-color: black;
 }
 
 .medbackground {
-    background-color: var(--meddark);
+    background-color: rgb(80, 80, 80);
 }
 
 .lightbackground {
-    background-color: var(--light);
+    background-color: white;
 }
 
 .greenbackground{
-    background-color: var(--green);
+    background-color: rgb(162, 231, 185);
 }
 
 .bluebackground{
-    background-color: var(--blue);
+    background-color: rgb(189, 235, 250);
 }
 
 .pinkbackground{
-    background-color: var(--pink);
+    background-color: rgb(250, 200, 234);
 }
 
 .yellowbackground{
-    background-color: var(--yellow);
+    background-color: rgb(241, 238, 176);
 }
 
 .lightgreenbackground {
-    background-color: var(--lightgreen);
+    background-color: rgb(185, 228, 199);
 }
 
 .lightbluebackground {
-    background-color: var(--lightblue);
+    background-color: rgb(215, 240, 248);
 }
 
 .lightpinkbackground {
-    background-color: var(--lightpink);
+    background-color: rgb(246, 220, 238);
 }
 
 .lightyellowbackground {
-    background-color: var(--lightyellow);
+    background-color: rgb(240, 238, 203);
 }
 
 .rainbow-h {
-    background-image: linear-gradient(to right, var(--lightgreen), var(--lightblue), var(--lightpink), var(--lightyellow))
+    background-image: linear-gradient(to right, rgb(185, 228, 199), rgb(215, 240, 248), rgb(246, 220, 238), rgb(240, 238, 203))
 }
 
 .greentoblue-h {
-    background-image: linear-gradient(to right, var(--lightgreen), var(--lightblue));
+    background-image: linear-gradient(to right, rgb(185, 228, 199), rgb(215, 240, 248));
 }
 
 .greentopink-h {
-    background-image: linear-gradient(to right, var(--lightgreen), var(--lightpink));
+    background-image: linear-gradient(to right, rgb(185, 228, 199), rgb(246, 220, 238));
 }
 
 .greentoyellow-h {
-    background-image: linear-gradient(to right, var(--lightgreen), var(--lightyellow));
+    background-image: linear-gradient(to right, rgb(185, 228, 199), rgb(240, 238, 203));
 }
 
 .greentolight-h {
-    background-image: linear-gradient(to right, var(--lightgreen), var(--light));
+    background-image: linear-gradient(to right, rgb(185, 228, 199), white);
 }
 
 .bluetogreen-h {
-    background-image: linear-gradient(to right, var(--lightblue), var(--lightgreen));
+    background-image: linear-gradient(to right, rgb(215, 240, 248), rgb(185, 228, 199));
 }
 
 .bluetopink-h {
-    background-image: linear-gradient(to right, var(--lightblue), var(--lightpink));
+    background-image: linear-gradient(to right, rgb(215, 240, 248), rgb(246, 220, 238));
 }
 
 .bluetoyellow-h {
-    background-image: linear-gradient(to right, var(--lightblue), var(--lightyellow));
+    background-image: linear-gradient(to right, rgb(215, 240, 248), rgb(240, 238, 203));
 }
 
 .bluetolight-h {
-    background-image: linear-gradient(to right, var(--lightblue), var(--light));
+    background-image: linear-gradient(to right, rgb(215, 240, 248), white);
 }
 
 .pinktogreen-h {
-    background-image: linear-gradient(to right, var(--lightpink), var(--lightgreen));
+    background-image: linear-gradient(to right, rgb(246, 220, 238), rgb(185, 228, 199));
 }
 
 .pinktoblue-h {
-    background-image: linear-gradient(to right, var(--lightpink), var(--lightblue));
+    background-image: linear-gradient(to right, rgb(246, 220, 238), rgb(215, 240, 248));
 }
 
 .pinktoyellow-h {
-    background-image: linear-gradient(to right, var(--lightpink), var(--lightyellow));
+    background-image: linear-gradient(to right, rgb(246, 220, 238), rgb(240, 238, 203));
 }
 
 .pinktolight-h {
-    background-image: linear-gradient(to right, var(--lightpink), var(--light));
+    background-image: linear-gradient(to right, rgb(246, 220, 238), white);
 }
 
 .yellowtogreen-h {
-    background-image: linear-gradient(to right, var(--lightyellow), var(--lightgreen));
+    background-image: linear-gradient(to right, rgb(240, 238, 203), rgb(185, 228, 199));
 }
 
 .yellowtoblue-h {
-    background-image: linear-gradient(to right, var(--lightyellow), var(--lightblue));
+    background-image: linear-gradient(to right, rgb(240, 238, 203), rgb(215, 240, 248));
 }
 
 .yellowtopink-h {
-    background-image: linear-gradient(to right, var(--lightyellow), var(--lightpink));
+    background-image: linear-gradient(to right, rgb(240, 238, 203), rgb(246, 220, 238));
 }
 
 .yellowtolight-h {
-    background-image: linear-gradient(to right, var(--lightyellow), var(--light));
+    background-image: linear-gradient(to right, rgb(240, 238, 203), white);
 }
 
 .lighttogreen-h {
-    background-image: linear-gradient(to right, var(--light), var(--green));
+    background-image: linear-gradient(to right, white, rgb(162, 231, 185));
 }
 
 .lighttoblue-h {
-    background-image: linear-gradient(to right, var(--light), var(--lightblue));
+    background-image: linear-gradient(to right, white, rgb(215, 240, 248));
 }
 
 .lighttopink-h {
-    background-image: linear-gradient(to right, var(--light), var(--lightpink));
+    background-image: linear-gradient(to right, white, rgb(246, 220, 238));
 }
 
 .lighttoyellow-h {
-    background-image: linear-gradient(to right, var(--light), var(--lightyellow));
+    background-image: linear-gradient(to right, white, rgb(240, 238, 203));
 }
 
 /*
@@ -222,27 +222,27 @@ a {
 */
 
 .darktext {
-    color: var(--dark);
+    color: black;
 }
 
 .lighttext {
-    color: var(--light);
+    color: white;
 }
 
 .greentext {
-    color: var(--green)
+    color: rgb(162, 231, 185)
 }
 
 .bluetext {
-    color: var(--blue);
+    color: rgb(189, 235, 250);
 }
 
 .pinktext {
-    color: var(--pink);
+    color: rgb(250, 200, 234);
 }
 
 .yellowtext {
-    color: var(--yellow);
+    color: rgb(241, 238, 176);
 }
 
 /*
@@ -250,28 +250,28 @@ a {
 */
 
 .name {
-    transition: var(--transitiontime);
+    transition: 0.5s;
 }
 
 .name:hover {
-    text-shadow: 0px 0px 0px var(--green), 5px 5px 0px var(--blue), 10px 10px 0px var(--pink), 15px 15px 0px var(--yellow);
+    text-shadow: 0px 0px 0px rgb(162, 231, 185), 5px 5px 0px rgb(189, 235, 250), 10px 10px 0px rgb(250, 200, 234), 15px 15px 0px rgb(241, 238, 176);
     color: transparent;
 }
 
 .greentitle:hover {
-    color: var(--green);
+    color: rgb(162, 231, 185);
 }
 
 .bluetitle:hover {
-    color: var(--blue);
+    color: rgb(189, 235, 250);
 }
 
 .pinktitle:hover {
-    color: var(--pink)
+    color: rgb(250, 200, 234)
 }
 
 .yellowtitle:hover {
-    color: var(--yellow);
+    color: rgb(241, 238, 176);
 }
 
 /*
@@ -283,23 +283,23 @@ h1, p {
 }
 
 h1 {
-    font-family: var(--headfont);
-    font-size: var(--headfontsize);
+    font-family: 'goudy bookletter 1911';
+    font-size: max(3vw,20pt);
     vertical-align: center;
 }
 
 text, p {
-    font-family: var(--textfont);
-    font-size: var(--textfontsize);
+    font-family: 'barlow';
+    font-size: max(1.6vw,15pt);
     vertical-align: top;
 }
 
 .smalltext {
-    font-size: var(--textfontsize);
+    font-size: max(1.6vw,15pt);
 }
 
 .largetext {
-    font-size: calc(var(--textfontsize)*1.5)
+    font-size: calc(max(1.6vw,15pt)*1.5)
 }
 
 /*
@@ -316,7 +316,7 @@ text, p {
 header,
 footer,
 .imagegallery {
-    margin: var(--spacing);
+    margin: 5px;
 }
 
 header,
@@ -327,7 +327,7 @@ footer,
 .fourcolumns,
 .imagegallery {
     display: grid;
-    grid-gap: var(--spacing);
+    grid-gap: 5px;
 }
 
 header {
@@ -345,8 +345,8 @@ footer,
 .imagegallery {
     grid-template-columns: 1fr;
     grid-auto-flow: dense;
-    grid-gap: var(--spacing);
-    padding: var(--spacing);
+    grid-gap: 5px;
+    padding: 5px;
 }
 
 /*
@@ -381,44 +381,44 @@ button {
     border-style: solid;
     border-width: 2px;
     padding: 1vw;
-    font-family: var(--textfont);
-    font-size: var(--textfontsize);
+    font-family: 'barlow';
+    font-size: max(1.6vw,15pt);
     transition: 0.05s;
     font-weight: 600;
-    background-color: var(--dark);
+    background-color: black;
 }
 
 .greenbutton {
-    border-color: var(--green);
-    color: var(--green)
+    border-color: rgb(162, 231, 185);
+    color: rgb(162, 231, 185)
 }
 .greenbutton:hover {
-    background-color: var(--green);
-    color: var(--dark);
+    background-color: rgb(162, 231, 185);
+    color: black;
 }
 .bluebutton {
-    border-color: var(--blue);
-    color: var(--blue)
+    border-color: rgb(189, 235, 250);
+    color: rgb(189, 235, 250)
 }
 .bluebutton:hover {
-    background-color: var(--blue);
-    color: var(--dark);
+    background-color: rgb(189, 235, 250);
+    color: black;
 }
 .pinkbutton {
-    border-color: var(--pink);
-    color: var(--pink)
+    border-color: rgb(250, 200, 234);
+    color: rgb(250, 200, 234)
 }
 .pinkbutton:hover {
-    background-color: var(--pink);
-    color: var(--dark);
+    background-color: rgb(250, 200, 234);
+    color: black;
 }
 .yellowbutton {
-    border-color: var(--yellow);
-    color: var(--yellow)
+    border-color: rgb(241, 238, 176);
+    color: rgb(241, 238, 176)
 }
 .yellowbutton:hover {
-    background-color: var(--yellow);
-    color: var(--dark);
+    background-color: rgb(241, 238, 176);
+    color: black;
 }
 
 figure {
@@ -437,7 +437,7 @@ iframe {
 }
 
 .soundcloud {
-    font-size: var(--textfontsize);
+    font-size: max(1.6vw,15pt);
 }
 
 .youtube {
@@ -472,56 +472,57 @@ select {
     width: 80%;
     height: max(5vw,60px);
     font-family: 'Barlow';
-    font-size: calc(var(--textfontsize)*1.2);
+    font-size: calc(max(1.6vw,15pt)*1.2);
     border: none;
     border-radius: 0;
-    border: var(--meddark);
+    border: rgb(80, 80, 80);
     border-width: 3px;
     border-style: solid;
     margin: 1vw;
     padding: 0 15px;
     border-radius: 999px;
-    background-color: var(--dark);
-    color: var(--green);
+    background-color: black;
+    color: rgb(162, 231, 185);
     text-align-last: center;
 }
 
 select option:disabled {
-    color: var(--pink);
+    color: rgb(250, 200, 234);
     font-style: italic;
 }
 
 select option:checked {
-    color: var(--blue)
+    color: rgb(189, 235, 250)
 }
 
 label {
-    font-size: var(--textfontsize);
-    font-family: var(--textfont);
+    font-size: max(1.6vw,15pt);
+    font-family: 'barlow';
     margin: 1vw;
 }
 textarea {
     width: 80%;
     height: 100px;
-    background-image: linear-gradient(var(--verydark),var(--verydark));
+    background-image: linear-gradient(rgb(39, 39, 39),rgb(39, 39, 39));
     resize: none;
     margin: 1vw;
     padding: 1vw;
     border: none;
-    font-size: var(--textfontsize);
-    font-family: var(--textfont);
-    color: var(--light);
+    font-size: max(1.6vw,15pt);
+    font-family: 'barlow';
+    color: white;
+    overflow: hidden;
 }
 
 .textinput {
     width: 80%;
-    background-image: linear-gradient(var(--verydark),var(--verydark));
+    background-image: linear-gradient(rgb(39, 39, 39),rgb(39, 39, 39));
     resize: none;
     margin: 1vw;
     padding: 1vw;
     border: none;
-    font-size: var(--textfontsize);
-    font-family: var(--textfont);
+    font-size: max(1.6vw,15pt);
+    font-family: 'barlow';
     color: inherit;
 }
 

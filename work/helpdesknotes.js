@@ -8,31 +8,39 @@ function textToClipboard (text) {
     changesSaved()
 }
 
-function groupText() {
-    contactname = document.getElementById('contactname')
-    console.log(contactname.value)
-    situation = document.getElementById('situation')
-    console.log(situation.value)
-    action = document.getElementById('action')
-    console.log(action.value)
-    response = document.getElementById('response')
-    console.log(response.value)
-    safeaccess = document.getElementById('safeaccess')
-    console.log(safeaccess.value)
-    accestype = document.getElementById('accesstype')
-    console.log(accesstype.value)
-    openmf = document.getElementById('mf')
-    console.log(openmf.value)
-    opensat = document.getElementById('sat')
-    console.log(opensat.value)
-    opensun = document.getElementById('sun')
+function makeTextNote() {
 
-    fulltext = ``
+    if (contactname.value.length == 0) {
+        alert(`Note requires the name of the person you are speaking to!`)
+        console.log(`Didn't copy - name required.`)
+        document.getElementById('contactname').value = `NAME PLEASE`
+        document.getElementById('contactname').select()
+        return
+    }
+
+    contactname = document.getElementById('contactname')   
+    situation = document.getElementById('situation')
+    action = document.getElementById('action')
+    response = document.getElementById('response')
+    safeaccess = document.getElementById('safeaccess')
+    accestype = document.getElementById('accesstype')
+    openmf = document.getElementById('mf')
+    opensat = document.getElementById('sat')
+    opensun = document.getElementById('sun')
+    appointment = document.getElementById('appointment')
+
+    if (accesstype.value.startsWith(`Appointment`) == true) {
+        appointmentstring = `Appointment: ${appointment.value}`
+    } else {
+        appointmentstring = ``
+    }
+
+    fulltext = `Open MF ${openmf.value} Sat ${opensat.value} Sun ${opensun.value} | ${accesstype.value} //  Spoke to ${contactname.value}, SITUATION: ${situation.value} ACTION: ${action.value} RESPONSE: ${response.value}  //  Safe access needed: ${safeaccess.value} ${appointmentstring}`
 
     textToClipboard(fulltext)
+    console.log(fulltext)
 
     document.getElementById('finishednote').innerHTML = fulltext
-
 }
 
 function changesSaved() {
@@ -53,7 +61,7 @@ function stopListeningForChanges() {
 }
 
 console.log(`helpdesknotes.js loaded :)`)
-document.getElementById("copy").addEventListener('click',groupText)
+document.getElementById("copy").addEventListener('click',makeTextNote)
 
 const params = new URLSearchParams(window.location.search)
 
