@@ -169,8 +169,20 @@ const accidentals = [
     { 'symbol' : '&#9839&#119082', 'offset' :  3 , 'name' : ' Triple Sharp'}
 ]
 
-const balalaika_strings = [-5,-5,0]
-const domra_strings = [-5,0,5]
+const instrument_strings = {
+    balalaika : [
+        { start : 7, end : 19 },
+        { start : 7, end : 19 },
+        { start : 12, end : 24 }
+    ],
+    domra : [
+        { start : 7, end : 19 },
+        { start : 12, end : 24 },
+        { start : 17, end : 29 }
+    ]
+}
+
+const domra_strings = [7,12,17]
 
 //Functions for finding values etc.
 
@@ -328,6 +340,22 @@ current_scale: ${variables.current_scale}
 LOG_VARIABLES END`)
 }
 
+function calc_chordnote_positions(chord_notenums,instrument_name) {
+    const strings = instrument_strings[instrument_name]
+    console.log(strings)
+    let strings_and_notes = []
+
+    for (i=0; i<strings.length; i++) {
+        strings_and_notes.push([])
+        strings_and_notes[i].push(strings[i]['start'])
+        strings_and_notes[i].push(strings[i]['end'])
+    }
+    console.log(strings_and_notes)
+}
+
+calc_chordnote_positions([0,4,7,11],'domra')
+
+
 // Workspace
 
 let variables = {
@@ -336,6 +364,10 @@ let variables = {
     current_scale_notename : 'A',
     current_scale : 'Ionian',
 }
+
+let instrument_chord_notes = []
+
+let instrument_scale_notes = []
 
 document.getElementById('selectchordnote').addEventListener('change',calc_and_push_chord)
 document.getElementById('selectchord').addEventListener('change',calc_and_push_chord)
@@ -356,7 +388,6 @@ function calc_and_push_chord() {
     log_variables()
 
     chordnotes = calc_chord_notenames(variables.current_chord_notename,variables.current_chord)
-    scalenotes = calc_scale_notenames(variables.current_scale_notename,variables.current_scale)
 
     document.getElementById('chordnotes').innerHTML = chordnotes
 }
@@ -372,11 +403,10 @@ function calc_and_push_scale() {
 
     log_variables()
 
-    chordnotes = calc_chord_notenames(variables.current_chord_notename,variables.current_chord)
     scalenotes = calc_scale_notenames(variables.current_scale_notename,variables.current_scale)
 
     document.getElementById('scalenotes').innerHTML = scalenotes
 }
 
-calc_and_push_chord()
-calc_and_push_scale()
+//calc_and_push_chord()
+//calc_and_push_scale()
