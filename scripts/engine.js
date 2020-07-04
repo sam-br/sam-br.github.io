@@ -182,8 +182,6 @@ const instrument_strings = {
     ]
 }
 
-const domra_strings = [7,12,17]
-
 //Functions for finding values etc.
 
 function accidental(offset,requested_parameter) {
@@ -408,5 +406,5 @@ function calc_and_push_scale() {
     document.getElementById('scalenotes').innerHTML = scalenotes
 }
 
-//calc_and_push_chord()
-//calc_and_push_scale()
+calc_and_push_chord()
+calc_and_push_scale()
