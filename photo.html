@@ -10,81 +10,85 @@
 <script src='scripts/script.js'></script>
 </head>
 
-<body>
+<body class=wrapper>
+    <div id='leftspacer'></div>
 
-    <header>
-        <div class='item name span darkbackground lighttext'>Sam B-R</div>
-        <a href='index.html' class='headitem greentitle greenbackground'>Home</a>
-        <a href='music.html' class='headitem bluetitle bluebackground'>Music</a>
-        <a href='photo.html' class='headitem pinktitle pinkbackground'>Photo</a>
-        <a href='other.html' class='headitem yellowtitle yellowbackground'>Other</a>
-    </header>
+    <div>
+        <header>
+            <div class='item name span darkbackground lighttext'>Sam B-R</div>
+            <a href='index.html' class='headitem greentitle greenbackground'>Home</a>
+            <a href='music.html' class='headitem bluetitle bluebackground'>Music</a>
+            <a href='photo.html' class='headitem pinktitle pinkbackground'>Photo</a>
+            <a href='other.html' class='headitem yellowtitle yellowbackground'>Other</a>
+        </header>
 
-    <div class='onecolumn margin'>
-        <h1 class='rainbow-h darktext'>This is the photos page.</h1>
-    </div>
-
-    <div class='twocolumns margin'>
-        <p class='greentoblue-h darktext'>These are some photos taken in the last few years, They are in no particular order, but the oldest were taken with a Fuji X-E1, then mainly with an X-T1, and the newest with an X-T3. Lenses are Fuji 16mm f2.8, 35mm f1.4, 55-200mm f3.5-4.8, Samyang 12mm f2, Viltrox 85mm f1.8.</p>
-        <p class='pinktoyellow-h darktext'>Locations here include the Lake District, Florence and Siena, Lincoln, and the Peak District.</p>
-    </div>
-
-    <div class='imagegallery darkbackground' id='gallery'>
-        <figure class='landscape'><img loading='lazy' src='images/a00-l.jpg'></figure>
-        <figure class='landscape'><img loading='lazy' src='images/a01-l.jpg'></figure>
-        <figure class='square'><img loading='lazy' src='images/a02-s.jpg'></figure>
-        <figure class='portrait'><img loading='lazy' src='images/a03-p.jpg'></figure>
-        <figure class='landscape'><img loading='lazy' src='images/a04-l.jpg'></figure>
-        <figure class='portrait'><img loading='lazy' src='images/a05-p.jpg'></figure>
-        <figure class='landscape'><img loading='lazy' src='images/a06-l.jpg'></figure>
-        <figure class='fullwidth'><img loading='lazy' src='images/a10-w.jpg'></figure>
-        <figure class='square'><img loading='lazy' src='images/a07-s.jpg'></figure>
-        <figure class='landscape'><img loading='lazy' src='images/a09-l.jpg'></figure>
-        <figure class='portrait'><img loading='lazy' src='images/a08-p.jpg'></figure>
-        <figure class='landscape'><img loading='lazy' src='images/a11-l.jpg'></figure>
-        <figure class='landscape'><img loading='lazy' src='images/a13-l.jpg'></figure>
-        <figure class='square'><img loading='lazy' src='images/a12-s.jpg'></figure>
-        <figure class='landscape'><img loading='lazy' src='images/a14-l.jpg'></figure>
-        <figure class='square'><img loading='lazy' src='images/a15-s.jpg'></figure>
-        <figure class='landscape'><img loading='lazy' src='images/a16-l.jpg'></figure>
-
-        <figure class='landscape'><img loading='lazy' src='images/b01-l.jpg'></figure>
-        <figure class='portrait'><img loading='lazy' src='images/b02-p.jpg'></figure>
-        <figure class='portrait'><img loading='lazy' src='images/b03-p.jpg'></figure>
-        <figure class='landscape'><img loading='lazy' src='images/b04-l.jpg'></figure>
-        <figure class='landscape'><img loading='lazy' src='images/b05-l.jpg'></figure>
-        <figure class='portrait'><img loading='lazy' src='images/b06-p.jpg'></figure>
-        <figure class='landscape'><img loading='lazy' src='images/b07-l.jpg'></figure>
-        <figure class='landscape'><img loading='lazy' src='images/b08-l.jpg'></figure>
-        <figure class='landscape'><img loading='lazy' src='images/b09-l.jpg'></figure>
-        <figure class='portrait'><img loading='lazy' src='images/b10-p.jpg'></figure>
-        <figure class='landscape'><img loading='lazy' src='images/b11-l.jpg'></figure>
-        <figure class='landscape'><img loading='lazy' src='images/b12-l.jpg'></figure>
-        <figure class='landscape'><img loading='lazy' src='images/b13-l.jpg'></figure>
-        <figure class='landscape'><img loading='lazy' src='images/b14-l.jpg'></figure>
-        <figure class='landscape'><img loading='lazy' src='images/b15-l.jpg'></figure>
-        <figure class='square'><img loading='lazy' src='images/b16-l.jpg'></figure>
-        <figure class='portrait'><img loading='lazy' src='images/b17-p.jpg'></figure>
-
-        <figure class='square'><img loading='lazy' src='images/c04-p.jpg'></figure>
-        <figure class='landscape'><img loading='lazy' src='images/c08-l.jpg'></figure>
-        <figure class='landscape' ><img loading='lazy' src='images/c01-l.jpg'></figure>
-        <figure class='landscape' ><img loading='lazy' src='images/c02-l.jpg'></figure>
-        <figure class='portrait' ><img loading='lazy' src='images/c03-p.jpg'></figure>
-        <figure class='square' ><img loading='lazy' src='images/c05-s.jpg'></figure>
-        <figure class='square' ><img loading='lazy' src='images/c06-l.jpg'></figure>
-        <figure class='square'  ><img loading='lazy' src='images/c09-s.jpg'></figure>
-    </div>
-
-    <Footer>
-        <div class='item smalltext darkbackground lighttext'>Site and contents &#169 Sam Brierley-Rimmer<br>
-            <a class='greentext' href='index.html'>Home</a> /
-            <a class='bluetext' href='music.html'>Music</a> /
-            <a class='pinktext' href='photo.html'>Photos</a> /
-            <a class='yellowtext' href='other.html'>Other</a>
+        <div class='onecolumn margin'>
+            <h1 class='rainbow-h darktext'>This is the photos page.</h1>
         </div>
-    </Footer>
 
+        <div class='twocolumns margin'>
+            <p class='greentoblue-h darktext'>These are some photos taken in the last few years, They are in no particular order, but the oldest were taken with a Fuji X-E1, then mainly with an X-T1, and the newest with an X-T3. Lenses are Fuji 16mm f2.8, 35mm f1.4, 55-200mm f3.5-4.8, Samyang 12mm f2, Viltrox 85mm f1.8.</p>
+            <p class='pinktoyellow-h darktext'>Locations here include the Lake District, Florence and Siena, Lincoln, and the Peak District.</p>
+        </div>
+
+        <div class='imagegallery darkbackground margin' id='gallery'>
+            <figure class='landscape'><img loading='lazy' src='images/a00-l.jpg'></figure>
+            <figure class='landscape'><img loading='lazy' src='images/a01-l.jpg'></figure>
+            <figure class='square'><img loading='lazy' src='images/a02-s.jpg'></figure>
+            <figure class='portrait'><img loading='lazy' src='images/a03-p.jpg'></figure>
+            <figure class='landscape'><img loading='lazy' src='images/a04-l.jpg'></figure>
+            <figure class='portrait'><img loading='lazy' src='images/a05-p.jpg'></figure>
+            <figure class='landscape'><img loading='lazy' src='images/a06-l.jpg'></figure>
+            <figure class='fullwidth'><img loading='lazy' src='images/a10-w.jpg'></figure>
+            <figure class='square'><img loading='lazy' src='images/a07-s.jpg'></figure>
+            <figure class='landscape'><img loading='lazy' src='images/a09-l.jpg'></figure>
+            <figure class='portrait'><img loading='lazy' src='images/a08-p.jpg'></figure>
+            <figure class='landscape'><img loading='lazy' src='images/a11-l.jpg'></figure>
+            <figure class='landscape'><img loading='lazy' src='images/a13-l.jpg'></figure>
+            <figure class='square'><img loading='lazy' src='images/a12-s.jpg'></figure>
+            <figure class='landscape'><img loading='lazy' src='images/a14-l.jpg'></figure>
+            <figure class='square'><img loading='lazy' src='images/a15-s.jpg'></figure>
+            <figure class='landscape'><img loading='lazy' src='images/a16-l.jpg'></figure>
+
+            <figure class='landscape'><img loading='lazy' src='images/b01-l.jpg'></figure>
+            <figure class='portrait'><img loading='lazy' src='images/b02-p.jpg'></figure>
+            <figure class='portrait'><img loading='lazy' src='images/b03-p.jpg'></figure>
+            <figure class='landscape'><img loading='lazy' src='images/b04-l.jpg'></figure>
+            <figure class='landscape'><img loading='lazy' src='images/b05-l.jpg'></figure>
+            <figure class='portrait'><img loading='lazy' src='images/b06-p.jpg'></figure>
+            <figure class='landscape'><img loading='lazy' src='images/b07-l.jpg'></figure>
+            <figure class='landscape'><img loading='lazy' src='images/b08-l.jpg'></figure>
+            <figure class='landscape'><img loading='lazy' src='images/b09-l.jpg'></figure>
+            <figure class='portrait'><img loading='lazy' src='images/b10-p.jpg'></figure>
+            <figure class='landscape'><img loading='lazy' src='images/b11-l.jpg'></figure>
+            <figure class='landscape'><img loading='lazy' src='images/b12-l.jpg'></figure>
+            <figure class='landscape'><img loading='lazy' src='images/b13-l.jpg'></figure>
+            <figure class='landscape'><img loading='lazy' src='images/b14-l.jpg'></figure>
+            <figure class='landscape'><img loading='lazy' src='images/b15-l.jpg'></figure>
+            <figure class='square'><img loading='lazy' src='images/b16-l.jpg'></figure>
+            <figure class='portrait'><img loading='lazy' src='images/b17-p.jpg'></figure>
+
+            <figure class='square'><img loading='lazy' src='images/c04-p.jpg'></figure>
+            <figure class='landscape'><img loading='lazy' src='images/c08-l.jpg'></figure>
+            <figure class='landscape' ><img loading='lazy' src='images/c01-l.jpg'></figure>
+            <figure class='landscape' ><img loading='lazy' src='images/c02-l.jpg'></figure>
+            <figure class='portrait' ><img loading='lazy' src='images/c03-p.jpg'></figure>
+            <figure class='square' ><img loading='lazy' src='images/c05-s.jpg'></figure>
+            <figure class='square' ><img loading='lazy' src='images/c06-l.jpg'></figure>
+            <figure class='square'  ><img loading='lazy' src='images/c09-s.jpg'></figure>
+        </div>
+
+        <Footer>
+            <div class='item smalltext darkbackground lighttext'>Site and contents &#169 Sam Brierley-Rimmer<br>
+                <a class='greentext' href='index.html'>Home</a> /
+                <a class='bluetext' href='music.html'>Music</a> /
+                <a class='pinktext' href='photo.html'>Photos</a> /
+                <a class='yellowtext' href='other.html'>Other</a>
+            </div>
+        </Footer>
+    </div>
+
+<div id='rightspacer'></div>
 </body>
 
 </html>
